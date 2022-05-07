@@ -1120,7 +1120,7 @@
                     'line-width': 4
                 },
                 //'filter': ['==', '$type', 'LineString']
-                'filter': ['>=', 'proporcao', 0.6]
+                'filter': [['>=', 'proporcao', 0.6], ['<=', 'proporcao', 0.85]]
             });
             map.addLayer({
                 'id': 'hard-traffic',
@@ -1134,6 +1134,7 @@
                 'filter': ['<', 'proporcao', 0.6]
             });
             map.addLayer({
+
                 'id': 'no-traffic',
                 'type': 'line',
                 'source': 'traffic-blumenau',
@@ -1142,7 +1143,7 @@
                     'line-width': 4
                 },
                 //'filter': ['==', '$type', 'LineString']
-                'filter': ['==', 'proporcao', undefined]
+                'filter': ['==', 'proporcao', 0]
             });
         }
 

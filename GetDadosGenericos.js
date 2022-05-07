@@ -66,5 +66,8 @@ function getDadosFiltrados(opcao, filtro) {
         return false;
     })
 
+    if (soma == 0.00 || dadosFiltrados.length == 0)
+        return 0
+
     return soma / dadosFiltrados.length;
 }
