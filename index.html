@@ -73,25 +73,25 @@
         <div style="display: flex;flex-direction: row;">
             <h2 style="margin: 0;">Dia da Semana:</h2>
             <select name="selectDay" style="margin-left: 5px;" id="SelectDia">
-                <option value="0">Domingo</option>
-                <option value="1">Segunda-feira</option>
-                <option value="2">Terça-feira</option>
-                <option value="3">Quarta-feira</option>
-                <option value="4">Quinta-feira</option>
-                <option value="5">Sexta-feira</option>
-                <option value="6">Sabado</option>
-                <option value="7">Todos</option>
+                <option value="0" selected>Todos</option>
+                <option value="1">Domingo</option>
+                <option value="2">Segunda-feira</option>
+                <option value="3">Terça-feira</option>
+                <option value="4">Quarta-feira</option>
+                <option value="5">Quinta-feira</option>
+                <option value="6">Sexta-feira</option>
+                <option value="7">Sabado</option>
             </select>
         </div>
         <div style="display: flex;flex-direction: row; margin-top: 10px;">
             <h2 style="margin: 0;">Clima: </h2>
             <select name="select" style="margin-left: 5px;" id="SelectClima">
                 <option value="0" selected>Todos</option>
-                <option value="1">chuva leve</option>
-                <option value="2">nublado</option>
-                <option value="3">chuva forte</option>
-                <option value="4">chuva moderada</option>
-                <option value="5">nuvens dispersas</option>
+                <option value="chuva leve">chuva leve</option>
+                <option value="nublado">nublado</option>
+                <option value="chuva forte">chuva forte</option>
+                <option value="chuva moderada">chuva moderada</option>
+                <option value="nuvens dispersas">nuvens dispersas</option>
             </select>
         </div>
         <div class="slidebar" id="slidebar">
@@ -1170,7 +1170,7 @@
 
         function getFilters() {
             var filtro = {}
-            if ($('#SelectDia').val() && $('#SelectDia').val() != '7')
+            if ($('#SelectDia').val() && $('#SelectDia').val() != '0')
                 filtro.DiaSemana = $('#SelectDia').val();
 
             if ($('#SelectClima').val() && $('#SelectClima').val() != '0')

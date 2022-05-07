@@ -48,7 +48,7 @@ function getDadosFiltrados(opcao, filtro) {
     var soma = 0.00;
     var dadosFiltrados = dados.filter((dado) => {
         if (filtro.Clima && filtro.DiaSemana) {
-            if (new Date(dado.data_hora).getDay() == filtro.DiaSemana && dado.clima == filtro.Clima) {
+            if (dia_semana == filtro.DiaSemana && dado.clima == filtro.Clima) {
                 soma += dado.proporcao;
                 return true;
             }
@@ -58,7 +58,7 @@ function getDadosFiltrados(opcao, filtro) {
                 return true;
             }
         } else if (filtro.DiaSemana) {
-            if (new Date(dados.data_hora).getDay() == filtro.DiaSemana) {
+            if (dia_semana == filtro.DiaSemana) {
                 soma += dado.proporcao;
                 return true;
             }
