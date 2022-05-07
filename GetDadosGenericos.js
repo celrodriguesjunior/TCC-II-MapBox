@@ -41,11 +41,10 @@ function getDados(opcao) {
 
 
 function getDadosFiltrados(opcao, filtro) {
-    console.log("filtro = "+filtro);
+    console.log("filtro = "+filtro.DiaSemana);
+    console.log("filtro = "+filtro.Clima);
     console.log("opcao = " + opcao);
     var dados = getDados(opcao);
-    console.log("dados:");
-    console.log(dados);
     var soma = 0.00;
     var dadosFiltrados = dados.filter((dado) => {
         if (filtro.Clima && filtro.DiaSemana) {
@@ -69,7 +68,8 @@ function getDadosFiltrados(opcao, filtro) {
         }
         return false;
     })
-
+    console.log("soma: "+soma);
+    console.log("qtdeDados: "+dadosFiltrados.length);
     if (soma == 0.00 || dadosFiltrados.length == 0)
         return 0
 
