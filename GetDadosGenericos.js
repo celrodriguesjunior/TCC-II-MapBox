@@ -97,6 +97,7 @@ function getDadosFiltrados(opcao, filtro) {
         } else if (filtro.Clima) {
             if (dados.clima == filtro.Clima) {
                 soma += dado.proporcao;
+                console.log("oi")
                 return true;
             }
         } else if (filtro.DiaSemana) {
