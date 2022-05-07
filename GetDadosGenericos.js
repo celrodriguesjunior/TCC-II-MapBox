@@ -41,14 +41,56 @@ function getDados(opcao) {
 
 
 function getDadosFiltrados(opcao, filtro) {
-    console.log("filtro = "+filtro.DiaSemana);
-    console.log("filtro = "+filtro.Clima);
-    console.log("opcao = " + opcao);
     var dados = getDados(opcao);
     var soma = 0.00;
     var dadosFiltrados = dados.filter((dado) => {
-        if (filtro.Clima && filtro.DiaSemana) {
+        if (filtro.Clima && filtro.DiaSemana && filtro.Hora) {
+            if (dado.dia_semana == filtro.DiaSemana && dado.clima == filtro.Clima && dado.hora == filtro.Hora) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.Clima && filtro.DiaSemana && filtro.Periodo) {
+            if (dado.dia_semana == filtro.DiaSemana && dado.clima == filtro.Clima && dado.periodo == filtro.Periodo) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.Clima && filtro.DiaSemana && filtro.Turno) {
+            if (dado.dia_semana == filtro.DiaSemana && dado.clima == filtro.Clima && dado.turno == filtro.Turno) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.Clima && filtro.DiaSemana) {
             if (dado.dia_semana == filtro.DiaSemana && dado.clima == filtro.Clima) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.Clima && filtro.Hora) {
+            if (dados.clima == filtro.Clima && dado.hora == filtro.Hora) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.DiaSemana && filtro.Hora) {
+            if (dado.dia_semana == filtro.DiaSemana && dado.hora == filtro.Hora) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.Clima && filtro.Periodo) {
+            if (dados.clima == filtro.Clima && dado.periodo == filtro.Periodo) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.DiaSemana && filtro.Periodo) {
+            if (dado.dia_semana == filtro.DiaSemana && dado.periodo == filtro.Periodo) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.Clima && filtro.Turno) {
+            if (dados.clima == filtro.Clima && dado.turno == filtro.Turno) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.DiaSemana && filtro.Turno) {
+            if (dado.dia_semana == filtro.DiaSemana && dado.turno == filtro.Turno) {
                 soma += dado.proporcao;
                 return true;
             }
@@ -62,14 +104,27 @@ function getDadosFiltrados(opcao, filtro) {
                 soma += dado.proporcao;
                 return true;
             }
+        } else if (filtro.Hora) {
+            if (dado.hora == filtro.Hora) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.Periodo) {
+            if (dado.periodo == filtro.Periodo) {
+                soma += dado.proporcao;
+                return true;
+            }
+        } else if (filtro.Turno) {
+            if (dado.turno == filtro.Turno) {
+                soma += dado.proporcao;
+                return true;
+            }
         } else {
             soma += dado.proporcao;
             return true;
         }
         return false;
     })
-    console.log("soma: "+soma);
-    console.log("qtdeDados: "+dadosFiltrados.length);
     if (soma == 0.00 || dadosFiltrados.length == 0)
         return 0
 

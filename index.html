@@ -85,7 +85,7 @@
         </div>
         <div style="display: flex;flex-direction: row; margin-top: 10px;">
             <h2 style="margin: 0;">Clima: </h2>
-            <select name="select" style="margin-left: 5px;" id="SelectClima">
+            <select name="selectClima" style="margin-left: 5px;" id="SelectClima">
                 <option value="0" selected>Todos</option>
                 <option value="chuva leve">chuva leve</option>
                 <option value="nublado">nublado</option>
@@ -97,52 +97,68 @@
         <div class="slidebar" id="slidebar">
             <div style="display: flex;flex-direction: row; margin-top: 10px;">
                 <h2 style="margin: 0;">Agrupador: </h2>
-                <select name="select" style="margin-left: 5px;">
-                    <option value="0" selected>Por Hora</option>
-                    <option value="1">Por Turno</option>
-                    <option value="2">Por Período</option>
+                <select name="selectAgrupador" style="margin-left: 5px;" id="select-agrupador">
+                    <option value="0" selected>Nenhum</option>
+                    <option value="1">Por Hora</option>
+                    <option value="2">Por Turno</option>
+                    <option value="3">Por Período</option>
                 </select>
             </div>
-            <div style="display: none;flex-direction: row; margin-top: 10px;">
+            <div style="display: flex;flex-direction: row; margin-top: 10px;" id="agrupador-turno">
                 <h2 style="margin: 0;">Turno: </h2>
-                <select name="select" style="margin-left: 5px;">
-                    <option value="0" selected>Manhã</option>
-                    <option value="1">Tarde</option>
-                    <option value="2">Noite</option>
-                    <option value="3">Madrugada</option>
+                <select name="selectTurno" style="margin-left: 5px;">
+                    <option value="0" selected>Todos</option>
+                    <option value="1">Manhã</option>
+                    <option value="2">Tarde</option>
+                    <option value="3">Noite</option>
+                    <option value="4">Madrugada</option>
                 </select>
             </div>
-            <h2>Hora do Dia: <label id="TimeDisplay">12:00</label></h2>
-            <input type="range" id="slider" min="0" max="23" value="12" step="1" list="volsettings"
-                style="width: 300px">
-            <datalist id="volsettings">
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
+            <div style="display: flex;flex-direction: row; margin-top: 10px;" id="agrupador-periodo">
+                <h2 style="margin: 0;">Periodo: </h2>
+                <select name="selectPeriodo" style="margin-left: 5px;">
+                    <option value="0" selected>Todos</option>
+                    <option value="1">Das 0:00 as 5:00</option>
+                    <option value="2">Das 6:00 as 9:00</option>
+                    <option value="3">Das 10:00 as 14:00</option>
+                    <option value="4">Das 15:00 as 17:00</option>
+                    <option value="5">Das 18:00 as 20:00</option>
+                    <option value="6">Das 21:00 as 23:00</option>
+                </select>
+            </div>
+            <div id="agrupador-hora">
+                <h2>Hora do Dia: <label id="TimeDisplay">12:00</label></h2>
+                <input type="range" id="slider" min="0" max="23" value="12" step="1" list="volsettings"
+                    style="width: 300px">
+                <datalist id="volsettings">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+            </div>
             </datalist>
         </div>
-        <div style="text-align: center;">
+        <div style="text-align: center;margin-top: 5px;">
             <button class="download" id="ver-trafego">Ver Tráfego</button>
         </div>
     </div>
@@ -174,9 +190,6 @@
 
 
     <script>
-        // TO MAKE THE MAP APPEAR YOU MUST
-        // ADD YOUR ACCESS TOKEN FROM
-        // https://account.mapbox.com
         //mapboxgl.accessToken = 'pk.eyJ1IjoiY2Vscm9kcmlndWVzIiwiYSI6ImNsMGE1b3h4aDA3Z20zbW8xaTFtczRzN2gifQ.aF97bmNQq8nfY_sd-yHP6A';
         mapboxgl.accessToken = 'pk.eyJ1IjoiY2Vscm9kcmlndWVzIiwiYSI6ImNsMGE1bXdoMzA2Ym8zZG1pMjR1MDI3NnQifQ.6l-dM8NWALCLmcIZu4AlJg';
         const map = new mapboxgl.Map({
@@ -206,7 +219,10 @@
 
         });
 
-        //$(window).ready(e => { console.log(getDadosFiltrados(22, {})) })
+        $('#select-agrupador').change(function () {
+            changeAgrupador()
+        })
+        changeAgrupador();
 
         function showMapData(filters) {
             map.addSource('traffic-blumenau', {
@@ -1176,11 +1192,29 @@
             if ($('#SelectClima').val() && $('#SelectClima').val() != '0')
                 filtro.Clima = $('#SelectClima').val()
 
+            switch ($('#select-agrupador').val()) {
+                case ('1'):
+                    filtro.Hora = $('#slider').val();
+                    break;
+                case ('2'):
+                    if ($('#agrupador-turno').val() && $('#agrupador-turno').val() != '0')
+                        filtro.Turno = $('#agrupador-turno').val();
+                    break;
+                case ('3'):
+                    if ($('#agrupador-periodo').val() && $('#agrupador-periodo').val() != '0')
+                        filtro.Periodo = $('#agrupador-periodo').val();
+                    break;
+                default: break;
+            }
 
-            console.log("selectDia = " + $('#SelectDia').val() + ", SelectClima = " + $('#SelectClima').val())
             return filtro;
         }
 
+        function changeAgrupador() {
+            $('#agrupador-hora').toggle($('#select-agrupador').val() == '1');
+            $('#agrupador-turno').toggle($('#select-agrupador').val() == '2');
+            $('#agrupador-periodo').toggle($('#select-agrupador').val() == '3');
+        }
     </script>
 
     <script>
