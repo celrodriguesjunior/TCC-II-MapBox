@@ -41,7 +41,11 @@ function getDados(opcao) {
 
 
 function getDadosFiltrados(opcao, filtro) {
+    console.log("filtro = "+filtro);
+    console.log("opcao = " + opcao);
     var dados = getDados(opcao);
+    console.log("dados:");
+    console.log(dados);
     var soma = 0.00;
     var dadosFiltrados = dados.filter((dado) => {
         if (filtro.Clima && filtro.DiaSemana) {
