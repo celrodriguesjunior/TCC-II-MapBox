@@ -171,7 +171,7 @@
             </div>
         </div>
 
-        <div style="text-align: center;">1500 registros encontrados</div>
+        <div style="text-align: center;" id="contagemRegistros">1500 registros encontrados</div>
     </div>
     <div id="map"></div>
 
@@ -204,9 +204,11 @@
                 'data': {
                     'type': 'FeatureCollection',
                     'features': [
-                        {//Rua Presidente John Kenedy
+                        {//Rua Presidente John Kenedy - 22
                             'type': 'Feature',
-                            'properties': {},
+                            'properties': {
+                                "proporcao":getDadosFiltrados(22,{})
+                            },
                             'geometry': {
                                 "type": "LineString",
                                 "coordinates": [
@@ -233,9 +235,11 @@
                                 ]
                             }
                         },
-                        {//Rua Namy Deeke
+                        {//Rua Namy Deeke - 23
                             'type': 'Feature',
-                            'properties': {},
+                            'properties': {
+                                "proporcao":getDadosFiltrados(23,{})
+                            },
                             'geometry': {
                                 "type": "LineString",
                                 "coordinates": [//Rua Namy Deeke
@@ -260,7 +264,9 @@
                         },
                         {//Rua Presidente Getúlio Vargas
                             'type': 'Feature',
-                            'properties': {},
+                            'properties': {
+                                "proporcao":getDadosFiltrados(24,{})
+                            },
                             'geometry': {
                                 "type": "LineString",
                                 "coordinates": [
@@ -277,7 +283,9 @@
                         },
                         {//Rua Padre Jacobs
                             'type': 'Feature',
-                            'properties': {},
+                            'properties': {
+                                "proporcao":getDadosFiltrados(14,{})
+                            },
                             'geometry': {
                                 "type": "LineString",
                                 "coordinates": [
@@ -298,7 +306,9 @@
                         },
                         {//Rua Dr. Amadeu Luz
                             'type': 'Feature',
-                            'properties': {},
+                            'properties': {
+                                "proporcao":getDadosFiltrados(11,{})
+                            },
                             'geometry': {
                                 "type": "LineString",
                                 "coordinates": [
@@ -1032,9 +1042,22 @@
                     'line-color': '#888',
                     'line-width': 4
                 },
-                'filter': ['==', '$type', 'LineString']
+                //'filter': ['==', '$type', 'LineString']
+                'filter': ['>=', 'proporcao', '0.9']
             });
             
+            map.addLayer({
+                'id': 'park-volcanoes',
+                'type': 'line',
+                'source': 'national-park',
+                'paint': {
+                    'line-color': '#000',
+                    'line-width': 4
+                },
+                //'filter': ['==', '$type', 'LineString']
+                'filter': ['<', 'proporcao', '0.9']
+            });
+
         });
 
         $(window).ready(e=>{console.log(getDadosFiltrados(1, {}))})
