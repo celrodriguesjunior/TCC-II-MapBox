@@ -65,7 +65,7 @@ function getDadosFiltrados(opcao, filtro) {
                 return true;
             }
         } else if (filtro.Clima && filtro.Hora) {
-            if (dados.clima == filtro.Clima && dado.hora == filtro.Hora) {
+            if (dado.clima == filtro.Clima && dado.hora == filtro.Hora) {
                 soma += dado.proporcao;
                 return true;
             }
@@ -75,7 +75,7 @@ function getDadosFiltrados(opcao, filtro) {
                 return true;
             }
         } else if (filtro.Clima && filtro.Periodo) {
-            if (dados.clima == filtro.Clima && dado.periodo == filtro.Periodo) {
+            if (dado.clima == filtro.Clima && dado.periodo == filtro.Periodo) {
                 soma += dado.proporcao;
                 return true;
             }
@@ -85,7 +85,7 @@ function getDadosFiltrados(opcao, filtro) {
                 return true;
             }
         } else if (filtro.Clima && filtro.Turno) {
-            if (dados.clima == filtro.Clima && dado.turno == filtro.Turno) {
+            if (dado.clima == filtro.Clima && dado.turno == filtro.Turno) {
                 soma += dado.proporcao;
                 return true;
             }
@@ -95,9 +95,8 @@ function getDadosFiltrados(opcao, filtro) {
                 return true;
             }
         } else if (filtro.Clima) {
-            if (dados.clima == filtro.Clima) {
+            if (dado.clima == filtro.Clima) {
                 soma += dado.proporcao;
-                console.log("oi")
                 return true;
             }
         } else if (filtro.DiaSemana) {
