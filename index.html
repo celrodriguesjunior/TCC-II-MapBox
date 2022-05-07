@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Display buildings in 3D</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <script
+        src="https://api.mapbox.com/styles/v1/celrodrigues/cl0y88kmj000k15lujkdx0jcp.html?title=view&access_token=pk.eyJ1IjoiY2Vscm9kcmlndWVzIiwiYSI6ImNsMGE1bXdoMzA2Ym8zZG1pMjR1MDI3NnQifQ.6l-dM8NWALCLmcIZu4AlJg&zoomwheel=true&fresh=true#9/37.78/-122.4241"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="GetDadosGenericos.js"></script>
+    <script>
+        for(var i = 1; i <= 33; i++){
+            $('head').append($('<script src="https://raw.githubusercontent.com/celrodriguesjunior/TCC-II-MapBox/main/MapBox/js/dados'+i+'.js">'));
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #menu {
+            position: absolute;
+            width: 330px;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: white;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            opacity: 80%;
+            border-radius: 10px;
+            z-index: 999;
+        }
+
+        #menuLegenda {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 200px;
+            width: 200px;
+            background-color: white;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            opacity: 80%;
+            z-index: 999;
+        }
+
+        .legenda {
+            display: flex;
+            align-items: center;
+        }
+
+        .spanCor {
+            height: 15px;
+            width: 15px;
+            border-radius: 50px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <h1> Tráfego de Blumenau </h1>
+        <div style="display: flex;flex-direction: row;">
+            <h2 style="margin: 0;">Dia da Semana:</h2>
+            <select name="select" style="margin-left: 5px;">
+                <option value="0">Domingo</option>
+                <option value="1">Segunda-feira</option>
+                <option value="2">Terça-feira</option>
+                <option value="3">Quarta-feira</option>
+                <option value="4">Quinta-feira</option>
+                <option value="5">Sexta-feira</option>
+                <option value="6">Sabado</option>
+                <option value="7">Todos</option>
+            </select>
+            <div>
+                <input type="checkbox" id="horns" name="horns">
+                <label for="horns">Dias Úteis</label>
+            </div>
+        </div>
+        <div style="display: flex;flex-direction: row; margin-top: 10px;">
+            <h2 style="margin: 0;">Clima: </h2>
+            <select name="select" style="margin-left: 5px;">
+                <option value="0" selected>Todos</option>
+                <option value="1">chuva leve</option>
+                <option value="2">nublado</option>
+                <option value="3">chuva forte</option>
+                <option value="4">chuva moderada</option>
+                <option value="5">nuvens dispersas</option>
+            </select>
+        </div>
+        <div class="slidebar" id="slidebar">
+            <div style="display: flex;flex-direction: row; margin-top: 10px;">
+                <h2 style="margin: 0;">Agrupador: </h2>
+                <select name="select" style="margin-left: 5px;">
+                    <option value="0" selected>Por Hora</option>
+                    <option value="1">Por Turno</option>
+                    <option value="2">Por Período</option>
+                </select>
+            </div>
+            <div style="display: none;flex-direction: row; margin-top: 10px;">
+                <h2 style="margin: 0;">Turno: </h2>
+                <select name="select" style="margin-left: 5px;">
+                    <option value="0" selected>Manhã</option>
+                    <option value="1">Tarde</option>
+                    <option value="2">Noite</option>
+                    <option value="3">Madrugada</option>
+                </select>
+            </div>
+            <h2>Hora do Dia: <label id="TimeDisplay">12:00</label></h2>
+            <input type="range" id="slider" min="0" max="23" value="12" step="1" list="volsettings"
+                style="width: 300px">
+            <datalist id="volsettings">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+            </datalist>
+        </div>
+        <div style="text-align: center;">
+            <button class="download">Ver Tráfego</button>
+        </div>
+    </div>
+    <div id="menuLegenda" style="display: flex;flex-direction: column;justify-content: space-between;">
+        <h1 style="text-align: center;">Legenda</h1>
+        <div style="display: flex;flex-direction: column;align-items: center;">
+            <div class="legenda">
+                <span style="background-color: red;" class="spanCor"></span>
+                Tráfego Pesado
+            </div>
+            <div class="legenda">
+                <span style="background-color: yellow;" class="spanCor"></span>
+                Tráfego Moderado
+            </div>
+            <div class="legenda">
+                <span style="background-color: green;" class="spanCor"></span>
+                Tráfego Leve
+            </div>
+            <div class="legenda">
+                <span style="background-color: grey;" class="spanCor"></span>
+                Sem Dados
+            </div>
+        </div>
+
+        <div style="text-align: center;">1500 registros encontrados</div>
+    </div>
+    <div id="map"></div>
+
+
+
+    <script>
+        // TO MAKE THE MAP APPEAR YOU MUST
+        // ADD YOUR ACCESS TOKEN FROM
+        // https://account.mapbox.com
+        //mapboxgl.accessToken = 'pk.eyJ1IjoiY2Vscm9kcmlndWVzIiwiYSI6ImNsMGE1b3h4aDA3Z20zbW8xaTFtczRzN2gifQ.aF97bmNQq8nfY_sd-yHP6A';
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY2Vscm9kcmlndWVzIiwiYSI6ImNsMGE1bXdoMzA2Ym8zZG1pMjR1MDI3NnQifQ.6l-dM8NWALCLmcIZu4AlJg';
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/light-v10', // style URL
+            //style: 'mapbox://styles/celrodrigues/cl0y9nxgx000g16nz3zz55cij', // style URL
+            //center: [-49.0595, -26.9113], // starting position
+            center: [
+                -49.068976910075996,
+                -26.919442854629267
+            ], // starting position
+            zoom: 15, // starting zoom
+            antialias: false,
+            pitch: 0,
+            bearing: 0,
+        });
+
+        map.on('load', () => {
+            map.addSource('national-park', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'FeatureCollection',
+                    'features': [
+                        {//Rua Presidente John Kenedy
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.068976910075996,
+                                        -26.919442854629267
+                                    ],
+                                    [
+                                        -49.06834163326929,
+                                        -26.919059026081232
+                                    ],
+                                    [
+                                        -49.06765766996489,
+                                        -26.918604624293387
+                                    ],
+                                    [
+                                        -49.067564207635826,
+                                        -26.918505112552115
+                                    ],
+                                    [
+                                        -49.06712728408392,
+                                        -26.918152546098643
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Namy Deeke
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [//Rua Namy Deeke
+                                    [
+                                        -49.069640237435294,
+                                        -26.9187502507941
+                                    ],
+                                    [
+                                        -49.06894554529184,
+                                        -26.918286281363656
+                                    ],
+                                    [
+                                        -49.06842251452378,
+                                        -26.917922757593082
+                                    ],
+                                    [
+                                        -49.06778347821358,
+                                        -26.91754308924696
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Presidente Getúlio Vargas
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.0703248713079,
+                                        -26.915763713166587
+                                    ],
+                                    [
+                                        -49.06846841417564,
+                                        -26.91792308446184
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Padre Jacobs
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.06716740479048,
+                                        -26.920926279201623
+                                    ],
+                                    [
+                                        -49.06657731879575,
+                                        -26.92051971599788
+                                    ],
+                                    [
+                                        -49.06550711738235,
+                                        -26.91974485030212
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Dr. Amadeu Luz
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.071652058296785,
+                                        -26.91662859280396
+                                    ],
+                                    [
+                                        -49.07080716244657,
+                                        -26.91605699057758
+                                    ],
+                                    [
+                                        -49.06955188860996,
+                                        -26.915102719321972
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Paulo Zimmerman
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.07216167802005,
+                                        -26.916035465740453
+                                    ],
+                                    [
+                                        -49.07031363597479,
+                                        -26.91456459287721
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Curt Heining
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.0663218425469,
+                                        -26.920392309998807
+                                    ],
+                                    [
+                                        -49.065796129571595,
+                                        -26.92089214394518
+                                    ],
+                                    [
+                                        -49.06533826648631,
+                                        -26.921156500422182
+                                    ],
+                                    [
+                                        -49.064485324014186,
+                                        -26.921630024172735
+                                    ],
+                                    [
+                                        -49.06357605514829,
+                                        -26.92210354593182
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Caetano Deeke
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.06487179906328,
+                                        -26.922280886638966
+                                    ],
+                                    [
+                                        -49.06437022597328,
+                                        -26.921415154795042
+                                    ],
+                                    [
+                                        -49.06400008112203,
+                                        -26.920920106256546
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Paulo Hering
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.065812657407726,
+                                        -26.921848927339273
+                                    ],
+                                    [
+                                        -49.06483365109828,
+                                        -26.920380521807175
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Floriano Peixoto
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.06534058861194,
+                                        -26.92542898255089
+                                    ],
+                                    [
+                                        -49.06449717639569,
+                                        -26.923892323286868
+                                    ],
+                                    [
+                                        -49.0629790460694,
+                                        -26.921027292545592
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Angelo Dias
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.0635610854695,
+                                        -26.92414462424508
+                                    ],
+                                    [
+                                        -49.062355245720724,
+                                        -26.921781113246855
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Eng. Rodolfo Ferraz
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.061339270712416,
+                                        -26.92532595018312
+                                    ],
+                                    [
+                                        -49.06257576909229,
+                                        -26.925072456125214
+                                    ],
+                                    [
+                                        -49.06469165262883,
+                                        -26.924709305627935
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Dr. Luiz de Freitas Melro
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.06438856300885,
+                                        -26.923831635006053
+                                    ],
+                                    [
+                                        -49.06285702163646,
+                                        -26.924498856613603
+                                    ],
+                                    [
+                                        -49.06107335263766,
+                                        -26.924903014023997
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Cel. Vidal Ramos
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.06517181616159,
+                                        -26.925329910631426
+                                    ],
+                                    [
+                                        -49.0615588805833,
+                                        -26.926083215060963
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Alameda Rio Branco
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.061819426969315,
+                                        -26.927318473601243
+                                    ],
+                                    [
+                                        -49.06045686476563,
+                                        -26.922518814719105
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Nereu Ramos
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.06334828608943,
+                                        -26.926950196124952
+                                    ],
+                                    [
+                                        -49.06311225169129,
+                                        -26.92645756329832
+                                    ],
+                                    [
+                                        -49.062894992759254,
+                                        -26.925821441997783
+                                    ],
+                                    [
+                                        -49.06262802108052,
+                                        -26.925064848206294
+                                    ],
+                                    [
+                                        -49.062389304474124,
+                                        -26.924646342588325
+                                    ],
+                                    [
+                                        -49.06212913019847,
+                                        -26.92410826164678
+                                    ],
+                                    [
+                                        -49.061796536275565,
+                                        -26.92359170153438
+                                    ],
+                                    [
+                                        -49.06137006504026,
+                                        -26.922326597560215
+                                    ],
+                                    [
+                                        -49.06118767482871,
+                                        -26.921805246235394
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua República Argentina
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.060234656476965,
+                                        -26.914171719238862
+                                    ],
+                                    [
+                                        -49.06589788204448,
+                                        -26.918621698074055
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Av Brasil
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.066617852689205,
+                                        -26.91330183649128
+                                    ],
+                                    [
+                                        -49.06613505505715,
+                                        -26.914468982755128
+                                    ],
+                                    [
+                                        -49.06275788301313,
+                                        -26.91781961953585
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Pte. A P de Andrade (centro)
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.06903631471212,
+                                        -26.912607505567127
+                                    ],
+                                    [
+                                        -49.065839121504304,
+                                        -26.913344152997873
+                                    ],
+                                    [
+                                        -49.06966931605192,
+                                        -26.912320498773205
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Antônio da Veiga
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.07703935465053,
+                                        -26.905523107983303
+                                    ],
+                                    [
+                                        -49.08162593206986,
+                                        -26.90913955808538
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Heinrich Hosang
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.077033990184326,
+                                        -26.909072587856528
+                                    ],
+                                    [
+                                        -49.07847701866234,
+                                        -26.910158457627436
+                                    ],
+                                    [
+                                        -49.079614275292165,
+                                        -26.910411985198706
+                                    ],
+                                    [
+                                        -49.081057303757916,
+                                        -26.910584192276566
+                                    ],
+                                    [
+                                        -49.08135234675529,
+                                        -26.910765966126792
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Humberto Campos
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.080285712891424,
+                                        -26.91254083423033
+                                    ],
+                                    [
+                                        -49.08459870504038,
+                                        -26.914463762090193
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Paraíba
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.072246217037495,
+                                        -26.91118667515984
+                                    ],
+                                    [
+                                        -49.07480504448738,
+                                        -26.913262695370626
+                                    ],
+                                    [
+                                        -49.07510008748173,
+                                        -26.91355448317366
+                                    ],
+                                    [
+                                        -49.075255655607606,
+                                        -26.914032822195264
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Max Hering
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.078700360530476,
+                                        -26.90715349917562
+                                    ],
+                                    [
+                                        -49.07596987171426,
+                                        -26.91003323276781
+                                    ],
+                                    [
+                                        -49.075411972256624,
+                                        -26.910334596004212
+                                    ],
+                                    [
+                                        -49.07494526788688,
+                                        -26.910870350871487
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Martin Luther
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.06956021047501,
+                                        -26.91300056717282
+                                    ],
+                                    [
+                                        -49.07041851737269,
+                                        -26.91162293268688
+                                    ],
+                                    [
+                                        -49.07138947703858,
+                                        -26.910484458150403
+                                    ],
+                                    [
+                                        -49.07249457064903,
+                                        -26.908915486849278
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua XV de Novembro
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.0593831013515,
+                                        -26.92234597356325
+                                    ],
+                                    [
+                                        -49.060536451250286,
+                                        -26.92244641710053
+                                    ],
+                                    [
+                                        -49.06141085140612,
+                                        -26.922231180839695
+                                    ],
+                                    [
+                                        -49.06312210078262,
+                                        -26.921336750189948
+                                    ],
+                                    [
+                                        -49.06481189248032,
+                                        -26.92030360221511
+                                    ],
+                                    [
+                                        -49.065439529402,
+                                        -26.91969136192466
+                                    ],
+                                    [
+                                        -49.06604570861677,
+                                        -26.919045636112433
+                                    ],
+                                    [
+                                        -49.06772477148224,
+                                        -26.91756284440018
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua São Paulo
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.07050532836224,
+                                        -26.914298523463415
+                                    ],
+                                    [
+                                        -49.071245618064715,
+                                        -26.913332278825973
+                                    ],
+                                    [
+                                        -49.07123488922846,
+                                        -26.91277740192889
+                                    ],
+                                    [
+                                        -49.07167477151544,
+                                        -26.91161980513828
+                                    ],
+                                    [
+                                        -49.07274765512931,
+                                        -26.91016561710357
+                                    ],
+                                    [
+                                        -49.07286567232888,
+                                        -26.90936197884219
+                                    ],
+                                    [
+                                        -49.074217505692815,
+                                        -26.907113674754104
+                                    ],
+                                    [
+                                        -49.07547277951304,
+                                        -26.906262177660818
+                                    ],
+                                    [
+                                        -49.07684607053577,
+                                        -26.90534370170377
+                                    ],
+                                    [
+                                        -49.07750052953748,
+                                        -26.904032947056614
+                                    ],
+                                    [
+                                        -49.0775970890514,
+                                        -26.902109841527466
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Itajai
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.056985240942915,
+                                        -26.913971457574984
+                                    ],
+                                    [
+                                        -49.05815028053056,
+                                        -26.917192226883174
+                                    ],
+                                    [
+                                        -49.05838631492097,
+                                        -26.918263668963846
+                                    ],
+                                    [
+                                        -49.05853674558704,
+                                        -26.91990534739092
+                                    ],
+                                    [
+                                        -49.05823633817154,
+                                        -26.920589333075846
+                                    ],
+                                ]
+                            }
+                        },
+                        {//Rua Theodoro Holtrup
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.08252495723638,
+                                        -26.909632820431458
+                                    ],
+                                    [
+                                        -49.083812417588526,
+                                        -26.90815947232287
+                                    ],
+                                    [
+                                        -49.08475655518968,
+                                        -26.907642839213114
+                                    ],
+                                    [
+                                        -49.089294852900174,
+                                        -26.902830383846883
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Engenheiro Paul Werner
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.08770322452028,
+                                        -26.89046639077045
+                                    ],
+                                    [
+                                        -49.08083163373498,
+                                        -26.89787048628371
+                                    ],
+                                    [
+                                        -49.07948074491435,
+                                        -26.90030537591283
+                                    ],
+                                    [
+                                        -49.07766757159591,
+                                        -26.90199888568962
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua 7 de Setembro
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.056963016316665,
+                                        -26.9263567972961
+                                    ],
+                                    [
+                                        -49.05986034728259,
+                                        -26.92387247852198
+                                    ],
+                                    [
+                                        -49.06091177323683,
+                                        -26.92360463227602
+                                    ],
+                                    [
+                                        -49.06211340289883,
+                                        -26.923432445067817
+                                    ],
+                                    [
+                                        -49.06453811989536,
+                                        -26.922514108852535
+                                    ],
+                                    [
+                                        -49.06674826016654,
+                                        -26.92127051664653
+                                    ],
+                                    [
+                                        -49.068507789289896,
+                                        -26.920065175704753
+                                    ],
+                                    [
+                                        -49.072429178851365,
+                                        -26.915961180232213
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Av. Pres. Castelo Branco
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.05997682111429,
+                                        -26.92205641601876
+                                    ],
+                                    [
+                                        -49.061232094957624,
+                                        -26.92173116883068
+                                    ],
+                                    [
+                                        -49.062144046040395,
+                                        -26.921310259313174
+                                    ],
+                                    [
+                                        -49.0660815289507,
+                                        -26.91860300829918
+                                    ],
+                                    [
+                                        -49.06749773529016,
+                                        -26.91677581624127
+                                    ],
+                                    [
+                                        -49.068645720748535,
+                                        -26.913934521721806
+                                    ]
+                                ]
+                            }
+                        },
+                        {//Rua Amazonas
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                "type": "LineString",
+                                "coordinates": [
+                                    [
+                                        -49.0572836278607,
+                                        -26.92706023574122
+                                    ],
+                                    [
+                                        -49.05950449696087,
+                                        -26.93094382513675
+                                    ]
+                                ]
+                            }
+                        }
+                    ]
+                }
+            });
+            map.addLayer({
+                'id': 'park-volcanoes',
+                'type': 'line',
+                'source': 'national-park',
+                'paint': {
+                    'line-color': '#888',
+                    'line-width': 4
+                },
+                'filter': ['==', '$type', 'LineString']
+            });
+            
+        });
+
+        $(window).ready(e=>{console.log(getDadosFiltrados(1, {}))})
+
+    </script>
+
+    <script>
+        $(window).ready(e=>{
+            $('#slider').change(e=>{
+                var hora = $('#slider').val()
+                var textoHora = hora + ':00';
+                $('#TimeDisplay').text(textoHora)
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>
