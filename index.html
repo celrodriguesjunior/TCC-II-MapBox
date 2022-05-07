@@ -1120,7 +1120,11 @@
                     'line-width': 4
                 },
                 //'filter': ['==', '$type', 'LineString']
-                'filter': [['>=', 'proporcao', 0.6], ['<=', 'proporcao', 0.85]]
+                'filter': [
+                    'all',
+                    ['>=', 'proporcao', 0.6],
+                    ['<=', 'proporcao', 0.85]
+                ]
             });
             map.addLayer({
                 'id': 'hard-traffic',
