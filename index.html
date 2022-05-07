@@ -1170,10 +1170,10 @@
 
         function getFilters() {
             var filtro = {}
-            if ($('#SelectDia').val())
+            if ($('#SelectDia').val() && $('#SelectDia').val() != '7')
                 filtro.DiaSemana = $('#SelectDia').val();
 
-            if ($('#SelectClima').val())
+            if ($('#SelectClima').val() && $('#SelectClima').val() != '0')
                 filtro.Clima = $('#SelectClima').val()
 
             return filtro;
