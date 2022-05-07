@@ -12,8 +12,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="GetDadosGenericos.js"></script>
     <script>
-        for(var i = 1; i <= 33; i++){
-            $('head').append($('<script src="js/dados'+i+'.js">'));
+        for (var i = 1; i <= 33; i++) {
+            $('head').append($('<script src="js/dados' + i + '.js">'));
         }
     </script>
     <style>
@@ -72,7 +72,7 @@
         <h1> Tráfego de Blumenau </h1>
         <div style="display: flex;flex-direction: row;">
             <h2 style="margin: 0;">Dia da Semana:</h2>
-            <select name="select" style="margin-left: 5px;">
+            <select name="selectDay" style="margin-left: 5px;" id="SelectDia">
                 <option value="0">Domingo</option>
                 <option value="1">Segunda-feira</option>
                 <option value="2">Terça-feira</option>
@@ -82,14 +82,10 @@
                 <option value="6">Sabado</option>
                 <option value="7">Todos</option>
             </select>
-            <div>
-                <input type="checkbox" id="horns" name="horns">
-                <label for="horns">Dias Úteis</label>
-            </div>
         </div>
         <div style="display: flex;flex-direction: row; margin-top: 10px;">
             <h2 style="margin: 0;">Clima: </h2>
-            <select name="select" style="margin-left: 5px;">
+            <select name="select" style="margin-left: 5px;" id="SelectClima">
                 <option value="0" selected>Todos</option>
                 <option value="1">chuva leve</option>
                 <option value="2">nublado</option>
@@ -147,7 +143,7 @@
             </datalist>
         </div>
         <div style="text-align: center;">
-            <button class="download">Ver Tráfego</button>
+            <button class="download" id="ver-trafego">Ver Tráfego</button>
         </div>
     </div>
     <div id="menuLegenda" style="display: flex;flex-direction: column;justify-content: space-between;">
@@ -199,7 +195,21 @@
         });
 
         map.on('load', () => {
-            map.addSource('national-park', {
+            showMapData({});
+
+            $('#ver-trafego').click(e => {
+                e.preventDefault();
+                clearMapData();
+                var filters = getFilters();
+                showMapData(filters);
+            })
+
+        });
+
+        //$(window).ready(e => { console.log(getDadosFiltrados(22, {})) })
+
+        function showMapData(filters) {
+            map.addSource('traffic-blumenau', {
                 'type': 'geojson',
                 'data': {
                     'type': 'FeatureCollection',
@@ -207,7 +217,7 @@
                         {//Rua Presidente John Kenedy - 22
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(22,{})
+                                "proporcao": getDadosFiltrados(22, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -238,7 +248,7 @@
                         {//Rua Namy Deeke - 23
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(23,{})
+                                "proporcao": getDadosFiltrados(23, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -265,7 +275,7 @@
                         {//Rua Presidente Getúlio Vargas - 24
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(24,{})
+                                "proporcao": getDadosFiltrados(24, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -284,7 +294,7 @@
                         {//Rua Padre Jacobs - 14
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(14,{})
+                                "proporcao": getDadosFiltrados(14, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -307,7 +317,7 @@
                         {//Rua Dr. Amadeu Luz - 11
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(11,{})
+                                "proporcao": getDadosFiltrados(11, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -330,7 +340,7 @@
                         {//Rua Paulo Zimmerman - 27
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(27,{})
+                                "proporcao": getDadosFiltrados(27, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -349,7 +359,7 @@
                         {//Rua Curt Heining - 10
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(10,{})
+                                "proporcao": getDadosFiltrados(10, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -380,7 +390,7 @@
                         {//Rua Caetano Deeke - 15
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(15,{})
+                                "proporcao": getDadosFiltrados(15, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -403,7 +413,7 @@
                         {//Rua Paulo Hering - 13
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(13,{})
+                                "proporcao": getDadosFiltrados(13, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -422,7 +432,7 @@
                         {//Rua Floriano Peixoto - 5
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(5,{})
+                                "proporcao": getDadosFiltrados(5, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -445,7 +455,7 @@
                         {//Rua Angelo Dias - 17
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(17,{})
+                                "proporcao": getDadosFiltrados(17, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -464,7 +474,7 @@
                         {//Rua Eng. Rodolfo Ferraz - 19
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(19,{})
+                                "proporcao": getDadosFiltrados(19, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -487,7 +497,7 @@
                         {//Rua Dr. Luiz de Freitas Meiro - 18
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(18,{})
+                                "proporcao": getDadosFiltrados(18, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -510,7 +520,7 @@
                         {//Rua Cel. Vidal Ramos - 20
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(20,{})
+                                "proporcao": getDadosFiltrados(20, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -529,7 +539,7 @@
                         {//Rua Alameda Rio Branco - 21
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(21,{})
+                                "proporcao": getDadosFiltrados(21, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -548,7 +558,7 @@
                         {//Rua Nereu Ramos - 4
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(4,{})
+                                "proporcao": getDadosFiltrados(4, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -595,7 +605,7 @@
                         {//Rua República Argentina - 9
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(9,{})
+                                "proporcao": getDadosFiltrados(9, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -614,7 +624,7 @@
                         {//Av Brasil - 29
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(29,{})
+                                "proporcao": getDadosFiltrados(29, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -637,7 +647,7 @@
                         {//Pte. A P de Andrade - 28
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(28,{})
+                                "proporcao": getDadosFiltrados(28, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -660,7 +670,7 @@
                         {//Rua Antônio da Veiga - 7
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(7,{})
+                                "proporcao": getDadosFiltrados(7, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -679,7 +689,7 @@
                         {//Rua Heinrich Hosang - 32
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(32,{})
+                                "proporcao": getDadosFiltrados(32, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -710,7 +720,7 @@
                         {//Rua Humberto Campos - 33
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(33,{})
+                                "proporcao": getDadosFiltrados(33, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -729,7 +739,7 @@
                         {//Rua Paraíba - 30
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(30,{})
+                                "proporcao": getDadosFiltrados(30, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -756,7 +766,7 @@
                         {//Rua Max Hering - 31
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(31,{})
+                                "proporcao": getDadosFiltrados(31, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -783,7 +793,7 @@
                         {//Rua Martin Luther - 25
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(25,{})
+                                "proporcao": getDadosFiltrados(25, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -810,7 +820,7 @@
                         {//Rua XV de Novembro - 16
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(16,{})
+                                "proporcao": getDadosFiltrados(16, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -853,7 +863,7 @@
                         {//Rua São Paulo - 26
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(26,{})
+                                "proporcao": getDadosFiltrados(26, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -908,7 +918,7 @@
                         {//Rua Itajai - 1
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(1,{})
+                                "proporcao": getDadosFiltrados(1, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -939,7 +949,7 @@
                         {//Rua Theodoro Holtrup - 12
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(12,{})
+                                "proporcao": getDadosFiltrados(12, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -966,7 +976,7 @@
                         {//Rua Engenheiro Paul Werner - 8
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(8,{})
+                                "proporcao": getDadosFiltrados(8, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -993,7 +1003,7 @@
                         {//Rua 7 de Setembro - 3
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(3,{})
+                                "proporcao": getDadosFiltrados(3, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -1036,7 +1046,7 @@
                         {//Av. Pres. Castelo Branco - 2
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(2,{})
+                                "proporcao": getDadosFiltrados(2, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -1071,7 +1081,7 @@
                         {//Rua Amazonas - 6
                             'type': 'Feature',
                             'properties': {
-                                "proporcao":getDadosFiltrados(6,{})
+                                "proporcao": getDadosFiltrados(6, filters)
                             },
                             'geometry': {
                                 "type": "LineString",
@@ -1091,38 +1101,84 @@
                 }
             });
             map.addLayer({
-                'id': 'park-volcanoes',
+                'id': 'free-traffic',
                 'type': 'line',
-                'source': 'national-park',
+                'source': 'traffic-blumenau',
                 'paint': {
-                    'line-color': '#888',
+                    'line-color': 'green',
                     'line-width': 4
                 },
                 //'filter': ['==', '$type', 'LineString']
-                'filter': ['>=', 'proporcao', 0.9]
+                'filter': ['>=', 'proporcao', 0.85]
             });
-            
             map.addLayer({
-                'id': 'park-volcanoes1',
+                'id': 'moderate-traffic',
                 'type': 'line',
-                'source': 'national-park',
+                'source': 'traffic-blumenau',
                 'paint': {
-                    'line-color': '#000',
+                    'line-color': 'yellow',
                     'line-width': 4
                 },
                 //'filter': ['==', '$type', 'LineString']
-                'filter': ['<', 'proporcao', 0.9]
+                'filter': ['>=', 'proporcao', 0.6]
             });
+            map.addLayer({
+                'id': 'hard-traffic',
+                'type': 'line',
+                'source': 'traffic-blumenau',
+                'paint': {
+                    'line-color': 'red',
+                    'line-width': 4
+                },
+                //'filter': ['==', '$type', 'LineString']
+                'filter': ['<', 'proporcao', 0.6]
+            });
+            map.addLayer({
+                'id': 'no-traffic',
+                'type': 'line',
+                'source': 'traffic-blumenau',
+                'paint': {
+                    'line-color': 'grey',
+                    'line-width': 4
+                },
+                //'filter': ['==', '$type', 'LineString']
+                'filter': ['==', 'proporcao', undefined]
+            });
+        }
 
-        });
+        function clearMapData() {
+            if (map.getLayer('free-traffic'))
+                map.removeLayer('free-traffic');
 
-        $(window).ready(e=>{console.log(getDadosFiltrados(22, {}))})
+            if (map.getLayer('moderate-traffic'))
+                map.removeLayer('moderate-traffic');
+
+            if (map.getLayer('hard-traffic'))
+                map.removeLayer('hard-traffic');
+
+            if (map.getLayer('no-traffic'))
+                map.removeLayer('no-traffic');
+
+            if (map.getSource('traffic-blumenau'))
+                map.removeSource('traffic-blumenau');
+        }
+
+        function getFilters() {
+            var filtro = {}
+            if ($('#SelectDia').val())
+                filtro.DiaSemana = $('#SelectDia').val();
+
+            if ($('#SelectClima').val())
+                filtro.Clima = $('#SelectClima').val()
+
+            return filtro;
+        }
 
     </script>
 
     <script>
-        $(window).ready(e=>{
-            $('#slider').change(e=>{
+        $(window).ready(e => {
+            $('#slider').change(e => {
                 var hora = $('#slider').val()
                 var textoHora = hora + ':00';
                 $('#TimeDisplay').text(textoHora)
