@@ -1199,7 +1199,7 @@
                     break;
                 case ('2'):
                     if ($('#agrupador-turno').find('select').val() && $('#agrupador-turno').find('select').val() != '0')
-                        filtro.Turno = $('#agrupador-turno').val();
+                        filtro.Turno = $('#agrupador-turno').find('select').val();
                     break;
                 case ('3'):
                     if ($('#agrupador-periodo').find('select').val() && $('#agrupador-periodo').find('select').val() != '0')

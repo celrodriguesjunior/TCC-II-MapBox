@@ -110,13 +110,11 @@ function getDadosFiltrados(opcao, filtro) {
                 return true;
             }
         } else if (filtro.Periodo) {
-            console.log("Periodooo");
             if (dado.periodo == filtro.Periodo) {
                 soma += dado.proporcao;
                 return true;
             }
         } else if (filtro.Turno) {
-            console.log("Turnooo");
             if (dado.turno == filtro.Turno) {
                 soma += dado.proporcao;
                 return true;
