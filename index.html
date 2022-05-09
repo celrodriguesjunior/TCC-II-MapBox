@@ -106,9 +106,9 @@
                     <option value="3">Por Período</option>
                 </select>
             </div>
-            <div style="display: flex;flex-direction: row; margin-top: 10px;" >
+            <div style="display: flex;flex-direction: row; margin-top: 10px;" id="agrupador-turno">
                 <h2 style="margin: 0;">Turno: </h2>
-                <select name="selectTurno" style="margin-left: 5px;" id="agrupador-turno">
+                <select name="selectTurno" style="margin-left: 5px;">
                     <option value="0" selected>Todos</option>
                     <option value="1">Manhã</option>
                     <option value="2">Tarde</option>
@@ -116,9 +116,9 @@
                     <option value="4">Madrugada</option>
                 </select>
             </div>
-            <div style="display: flex;flex-direction: row; margin-top: 10px;" >
+            <div style="display: flex;flex-direction: row; margin-top: 10px;" id="agrupador-periodo">
                 <h2 style="margin: 0;">Periodo: </h2>
-                <select name="selectPeriodo" style="margin-left: 5px;" id="agrupador-periodo">
+                <select name="selectPeriodo" style="margin-left: 5px;">
                     <option value="0" selected>Todos</option>
                     <option value="1">Das 0:00 as 5:00</option>
                     <option value="2">Das 6:00 as 9:00</option>
@@ -1198,12 +1198,12 @@
                     filtro.Hora = $('#slider').val();
                     break;
                 case ('2'):
-                    if ($('#agrupador-turno').val() && $('#agrupador-turno').val() != '0')
+                    if ($('#agrupador-turno').find('select').val() && $('#agrupador-turno').find('select').val() != '0')
                         filtro.Turno = $('#agrupador-turno').val();
                     break;
                 case ('3'):
-                    if ($('#agrupador-periodo').val() && $('#agrupador-periodo').val() != '0')
-                        filtro.Periodo = $('#agrupador-periodo').val();
+                    if ($('#agrupador-periodo').find('select').val() && $('#agrupador-periodo').find('select').val() != '0')
+                        filtro.Periodo = $('#agrupador-periodo').find('select').val();
                     break;
                 default: break;
             }
