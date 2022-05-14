@@ -221,13 +221,13 @@
                 clearMapData();
                 var filters = getFilters();
                 showMapData(filters);
-                if ($('#mostrarAreasCensitarias').is('checked'))
+                if ($('#mostrarAreasCensitarias').is(':checked'))
                     addSetores();
                 else
                     removerSetores();
             })
 
-            addSetores();
+            //addSetores();
 
         });
 
