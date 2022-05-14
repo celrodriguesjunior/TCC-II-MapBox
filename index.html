@@ -1280,13 +1280,19 @@
                 '420240405000557',
                 '420240405000195',
                 '420240405000192',
-                '420240405000556'
+                '420240405000556',
+                '420240405000490',
+                '420240405000489',
+                '420240405000495',
+                '420240405000554',
+                '420240405000187',
+                '420240405000194'
             ]
 
             var setores = getSetores();
             var t = 0;
             setores.forEach(element => {
-                if (setoresLinhas.indexOf(element.CD_SETOR.toString()) == -1) {
+                if (setoresLinhas.indexOf(element.CD_SETOR.toString()) != -1) {
                     map.addSource('maine' + t, {
                         'type': 'geojson',
                         'data': {
