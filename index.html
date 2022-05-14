@@ -229,7 +229,7 @@
         changeAgrupador();
 
         function showMapData(filters) {
-            
+
             map.addSource('traffic-blumenau', {
                 'type': 'geojson',
                 'data': {
@@ -1170,7 +1170,7 @@
                 //'filter': ['==', '$type', 'LineString']
                 'filter': ['==', 'proporcao', 0]
             });
-            
+
 
         }
 
@@ -1227,69 +1227,99 @@
             $('#agrupador-periodo').toggle($('#select-agrupador').val() == '3');
         }
 
-        function addSetores(){
+        function addSetores() {
+            var setoresLinhas = [
+                '420240405000480',
+                '420240405000479',
+                '420240415000003',
+                '420240415000103',
+                '420240415000004',
+                '420240415000004',
+                '420240405000476',
+                '420240405000477',
+                '420240405000478',
+                '420240405000022',
+                '420240405000011',
+                '420240405000012',
+                '420240405000209',
+                '420240405000210',
+                '420240405000211',
+                '420240405000214',
+                '420240405000213',
+                '420240405000015',
+                '420240405000014',
+                '420240405000013',
+                '420240405000484',
+                '420240405000491',
+                '420240405000204',
+                '420240405000016',
+                '420240405000017',
+                '420240405000025',
+                '420240405000026',
+                '420240405000474'
+            ]
+
             var setores = getSetores();
             var t = 0;
             setores.forEach(element => {
-                //if (setores1.indexOf(element.CD_SETOR.toString()) != -1) {
-                    //console.log('oi')
-                    map.addSource('maine' + t, {
-                        'type': 'geojson',
-                        'data': {
-                            'type': 'Feature',
-                            'geometry': {
-                                'type': 'Polygon',
-                                'properties': {
-                                    'description':
-                                        '<p>' + element.CD_SETOR + '</p>',
-                                    'icon': 'theatre-15'
-                                },
-                                // These coordinates outline Maine.
-                                'coordinates': [
-                                    element.COORD
-                                ]
-                            }
+                if (setoresLinhas.indexOf(element.CD_SETOR.toString()) == -1) {
+                map.addSource('maine' + t, {
+                    'type': 'geojson',
+                    'data': {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Polygon',
+                            'properties': {
+                                'description':
+                                    '<p>' + element.CD_SETOR + '</p>',
+                                'icon': 'theatre-15'
+                            },
+                            // These coordinates outline Maine.
+                            'coordinates': [
+                                element.COORD
+                            ]
                         }
-                    });
+                    }
+                });
 
-                    // Add a new layer to visualize the polygon.
-                    map.addLayer({
-                        'id': 'maine' + t,
-                        'type': 'fill',
-                        'source': 'maine' + t, // reference the data source
-                        'layout': {},
-                        'paint': {
-                            'fill-color': '#0080ff', // blue color fill
-                            'fill-opacity': 0.5
-                        }
-                    });
-                    // Add a black outline around the polygon.
-                    map.addLayer({
-                        'id': 'outline' + t,
-                        'type': 'line',
-                        'source': 'maine' + t,
-                        'layout': {},
-                        'paint': {
-                            'line-color': '#000',
-                            'line-width': 3
-                        }
-                    });
+                // Add a new layer to visualize the polygon.
+                map.addLayer({
+                    'id': 'maine' + t,
+                    'type': 'fill',
+                    'source': 'maine' + t, // reference the data source
+                    'layout': {},
+                    'paint': {
+                        'fill-color': '#0080ff', // blue color fill
+                        'fill-opacity': 0.5
+                    }
+                });
+                // Add a black outline around the polygon.
+                map.addLayer({
+                    'id': 'outline' + t,
+                    'type': 'line',
+                    'source': 'maine' + t,
+                    'layout': {},
+                    'paint': {
+                        'line-color': '#000',
+                        'line-width': 3
+                    }
+                });
 
-                    map.on('click', 'maine' + t, (e) => {
-                        console.log(e);
-                        new mapboxgl.Popup()
-                            .setLngLat(e.lngLat)
-                            .setHTML(element.CD_SETOR)
-                            .addTo(map);
-                    });
+                map.on('click', 'maine' + t, (e) => {
+                    console.log(e);
+                    new mapboxgl.Popup()
+                        .setLngLat(e.lngLat)
+                        .setHTML(element.CD_SETOR)
+                        .addTo(map);
+                });
 
-                    t++;
+                t++;
 
-                //}
+                }
 
             })
 
-        
+
         }
 
     </script>
