@@ -11,10 +11,11 @@
         src="https://api.mapbox.com/styles/v1/celrodrigues/cl0y88kmj000k15lujkdx0jcp.html?title=view&access_token=pk.eyJ1IjoiY2Vscm9kcmlndWVzIiwiYSI6ImNsMGE1bXdoMzA2Ym8zZG1pMjR1MDI3NnQifQ.6l-dM8NWALCLmcIZu4AlJg&zoomwheel=true&fresh=true#9/37.78/-122.4241"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="GetDadosGenericos.js"></script>
+    <script src="poligonos-setores.js"></script>
     <script>
-        for (var i = 1; i <= 33; i++) {
+        /*for (var i = 1; i <= 33; i++) {
             $('head').append($('<script src="js/dados' + i + '.js">'));
-        }
+        }*/
     </script>
     <style>
         body {
@@ -218,6 +219,8 @@
                 showMapData(filters);
             })
 
+            addSetores();
+
         });
 
         $('#select-agrupador').change(function () {
@@ -226,6 +229,7 @@
         changeAgrupador();
 
         function showMapData(filters) {
+            
             map.addSource('traffic-blumenau', {
                 'type': 'geojson',
                 'data': {
@@ -1166,6 +1170,8 @@
                 //'filter': ['==', '$type', 'LineString']
                 'filter': ['==', 'proporcao', 0]
             });
+            
+
         }
 
         function clearMapData() {
@@ -1220,6 +1226,72 @@
             $('#agrupador-turno').toggle($('#select-agrupador').val() == '2');
             $('#agrupador-periodo').toggle($('#select-agrupador').val() == '3');
         }
+
+        function addSetores(){
+            var setores = getSetores();
+            var t = 0;
+            setores.forEach(element => {
+                //if (setores1.indexOf(element.CD_SETOR.toString()) != -1) {
+                    //console.log('oi')
+                    map.addSource('maine' + t, {
+                        'type': 'geojson',
+                        'data': {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Polygon',
+                                'properties': {
+                                    'description':
+                                        '<p>' + element.CD_SETOR + '</p>',
+                                    'icon': 'theatre-15'
+                                },
+                                // These coordinates outline Maine.
+                                'coordinates': [
+                                    element.COORD
+                                ]
+                            }
+                        }
+                    });
+
+                    // Add a new layer to visualize the polygon.
+                    map.addLayer({
+                        'id': 'maine' + t,
+                        'type': 'fill',
+                        'source': 'maine' + t, // reference the data source
+                        'layout': {},
+                        'paint': {
+                            'fill-color': '#0080ff', // blue color fill
+                            'fill-opacity': 0.5
+                        }
+                    });
+                    // Add a black outline around the polygon.
+                    map.addLayer({
+                        'id': 'outline' + t,
+                        'type': 'line',
+                        'source': 'maine' + t,
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#000',
+                            'line-width': 3
+                        }
+                    });
+
+                    map.on('click', 'maine' + t, (e) => {
+                        console.log(e);
+                        new mapboxgl.Popup()
+                            .setLngLat(e.lngLat)
+                            .setHTML(element.CD_SETOR)
+                            .addTo(map);
+                    });
+
+                    t++;
+
+                //}
+
+            })
+
+        
+        }
+
     </script>
 
     <script>
