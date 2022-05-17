@@ -191,6 +191,10 @@
                 Tráfego Pesado
             </div>
             <div class="legenda">
+                <span style="background-color: orange;" class="spanCor"></span>
+                Tráfego Moderado-Alto
+            </div>
+            <div class="legenda">
                 <span style="background-color: yellow;" class="spanCor"></span>
                 Tráfego Moderado
             </div>
@@ -1163,8 +1167,23 @@
                 //'filter': ['==', '$type', 'LineString']
                 'filter': [
                     'all',
-                    ['>=', 'proporcao', 0.6],
+                    ['>=', 'proporcao', 0.75],
                     ['<=', 'proporcao', 0.85]
+                ]
+            });
+            map.addLayer({
+                'id': 'moderate-high-traffic',
+                'type': 'line',
+                'source': 'traffic-blumenau',
+                'paint': {
+                    'line-color': 'orange',
+                    'line-width': 4
+                },
+                //'filter': ['==', '$type', 'LineString']
+                'filter': [
+                    'all',
+                    ['>=', 'proporcao', 0.50],
+                    ['<=', 'proporcao', 0.75]
                 ]
             });
             map.addLayer({
@@ -1176,7 +1195,7 @@
                     'line-width': 4
                 },
                 //'filter': ['==', '$type', 'LineString']
-                'filter': ['<', 'proporcao', 0.6]
+                'filter': ['<', 'proporcao', 0.5]
             });
             map.addLayer({
 
@@ -1200,6 +1219,9 @@
 
             if (map.getLayer('moderate-traffic'))
                 map.removeLayer('moderate-traffic');
+
+            if (map.getLayer('moderate-high-traffic'))
+                map.removeLayer('moderate-high-traffic');
 
             if (map.getLayer('hard-traffic'))
                 map.removeLayer('hard-traffic');
