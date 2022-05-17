@@ -130,7 +130,7 @@
                 </select>
             </div>
             <div id="agrupador-hora">
-                <h2>Hora do Dia: <label id="TimeDisplay">12:00</label></h2>
+                <h2>Hora do Dia: <label id="TimeDisplay">12</label>:<label id="minutosHora">00</label></h2>
                 <input type="range" id="slider" min="0" max="23" value="12" step="1" list="volsettings"
                     style="width: 300px">
                 <datalist id="volsettings">
@@ -158,12 +158,26 @@
                     <option>21</option>
                     <option>22</option>
                     <option>23</option>
+
+            </div>
+            <div id="agrupador-minuto">
+                <input type="range" id="sliderMinutos" min="0" max="50" value="0" step="10" list="minutosHora"
+                    style="width: 300px">
+                <datalist id="minutosHora">
+                    <option>00</option>
+                    <option>10</option>
+                    <option>20</option>
+                    <option>30</option>
+                    <option>40</option>
+                    <option>50</option>
             </div>
             </datalist>
         </div>
-        <div style="display: flex;flex-direction:row;">
+        <div style="display: flex;flex-direction:row;align-items: center;">
+            <label for="mostrarAreasCensitarias"
+                style="display: block;font-size: 1.5em;font-weight: bold;margin: 5px 0px;">Mostrar Áreas
+                Censitárias</label>
             <input type="checkbox" id="mostrarAreasCensitarias" name="mostrarAreasCensitarias">
-            <label for="mostrarAreasCensitarias">Mostrar Áreas Censitárias</label>
         </div>
         <div style="text-align: center;margin-top: 5px;">
             <button class="download" id="ver-trafego">Ver Tráfego</button>
@@ -196,7 +210,6 @@
 
 
     <script>
-        //mapboxgl.accessToken = 'pk.eyJ1IjoiY2Vscm9kcmlndWVzIiwiYSI6ImNsMGE1b3h4aDA3Z20zbW8xaTFtczRzN2gifQ.aF97bmNQq8nfY_sd-yHP6A';
         mapboxgl.accessToken = 'pk.eyJ1IjoiY2Vscm9kcmlndWVzIiwiYSI6ImNsMGE1bXdoMzA2Ym8zZG1pMjR1MDI3NnQifQ.6l-dM8NWALCLmcIZu4AlJg';
         const map = new mapboxgl.Map({
             container: 'map', // container ID
@@ -227,13 +240,12 @@
                     removerSetores();
             })
 
-            //addSetores();
-
         });
 
         $('#select-agrupador').change(function () {
             changeAgrupador()
         })
+
         changeAgrupador();
 
         function showMapData(filters) {
@@ -1210,6 +1222,7 @@
             switch ($('#select-agrupador').val()) {
                 case ('1'):
                     filtro.Hora = $('#slider').val();
+                    filtro.Minuto = $('#sliderMinutos').val();
                     break;
                 case ('2'):
                     if ($('#agrupador-turno').find('select').val() && $('#agrupador-turno').find('select').val() != '0')
@@ -1231,10 +1244,13 @@
 
         function changeAgrupador() {
             $('#agrupador-hora').toggle($('#select-agrupador').val() == '1');
+            $('#agrupador-minuto').toggle($('#select-agrupador').val() == '1');
             $('#agrupador-turno').toggle($('#select-agrupador').val() == '2');
             $('#agrupador-periodo').toggle($('#select-agrupador').val() == '3');
         }
+
         var t = 0;
+
         function addSetores() {
             var setoresLinhas = [
                 '420240405000480',
@@ -1357,7 +1373,6 @@
 
             })
 
-
         }
 
         function removerSetores() {
@@ -1379,10 +1394,16 @@
         $(window).ready(e => {
             $('#slider').change(e => {
                 var hora = $('#slider').val()
-                var textoHora = hora + ':00';
+                var textoHora = hora;
                 $('#TimeDisplay').text(textoHora)
             })
-
+            $('#sliderMinutos').change(e => {
+                var minuto = $('#sliderMinutos').val();
+                var textoMinuto = minuto;
+                if (textoMinuto == "0")
+                    textoMinuto += "0";
+                $('#minutosHora').text(textoMinuto)
+            })
         })
     </script>
 
