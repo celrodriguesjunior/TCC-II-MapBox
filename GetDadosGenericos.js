@@ -105,7 +105,7 @@ function getDadosFiltrados(opcao, filtro) {
                 return true;
             }
         } else if (filtro.Hora && filtro.Minuto) {
-            if (dado.hora == filtro.Hora) {
+            if (dado.hora == filtro.Hora && dado.minuto == filtro.Minuto) {
                 soma += dado.proporcao;
                 return true;
             }
