@@ -105,6 +105,7 @@
                     <option value="1">Por Hora</option>
                     <option value="2">Por Turno</option>
                     <option value="3">Por Período</option>
+                    <option value="4">Por Range</option>
                 </select>
             </div>
             <div style="display: flex;flex-direction: row; margin-top: 10px;" id="agrupador-turno">
@@ -158,7 +159,7 @@
                     <option>21</option>
                     <option>22</option>
                     <option>23</option>
-
+                </datalist>
             </div>
             <div id="agrupador-minuto">
                 <input type="range" id="sliderMinutos" min="0" max="50" value="0" step="10" list="minutosHora"
@@ -170,8 +171,39 @@
                     <option>30</option>
                     <option>40</option>
                     <option>50</option>
+                </datalist>
             </div>
-            </datalist>
+            <div id="agrupador-range">
+                <input type="range" id="sliderRange" min="0" max="24" value="12" step="1" list="minutosRange"
+                    style="width: 300px">
+                <datalist id="minutosRange">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                </datalist>
+            </div>
         </div>
         <div style="display: flex;flex-direction:row;align-items: center;">
             <label for="mostrarAreasCensitarias"
@@ -235,16 +267,20 @@
 
             $('#ver-trafego').click(e => {
                 e.preventDefault();
-                clearMapData();
-                var filters = getFilters();
-                showMapData(filters);
-                if ($('#mostrarAreasCensitarias').is(':checked'))
-                    addSetores();
-                else
-                    removerSetores();
+                submitBotao()
             })
 
         });
+
+        function submitBotao() {
+            clearMapData();
+            var filters = getFilters();
+            showMapData(filters);
+            if ($('#mostrarAreasCensitarias').is(':checked'))
+                addSetores();
+            else
+                removerSetores();
+        }
 
         $('#select-agrupador').change(function () {
             changeAgrupador()
@@ -1254,21 +1290,21 @@
                     if ($('#agrupador-periodo').find('select').val() && $('#agrupador-periodo').find('select').val() != '0')
                         filtro.Periodo = $('#agrupador-periodo').find('select').val();
                     break;
+                case ('4'):
+                    filtro.Hora = Number($('#TimeDisplay').text())
+                    filtro.Minuto = Number($('#minutosHora').text())
+                    break;
                 default: break;
             }
-            /*console.log(filtro.DiaSemana);
-            console.log(filtro.Clima);
-            console.log(filtro.Hora);
-            console.log(filtro.Turno);
-            console.log(filtro.Periodo);*/
             return filtro;
         }
 
         function changeAgrupador() {
-            $('#agrupador-hora').toggle($('#select-agrupador').val() == '1');
+            $('#agrupador-hora').toggle($('#select-agrupador').val() == '1' || $('#select-agrupador').val() == '4');
             $('#agrupador-minuto').toggle($('#select-agrupador').val() == '1');
             $('#agrupador-turno').toggle($('#select-agrupador').val() == '2');
             $('#agrupador-periodo').toggle($('#select-agrupador').val() == '3');
+            $('#agrupador-range').toggle($('#select-agrupador').val() == '4');
         }
 
         var t = 0;
@@ -1426,7 +1462,34 @@
                     textoMinuto += "0";
                 $('#minutosHora').text(textoMinuto)
             })
+            $('#sliderRange').change(e => {
+                slider()
+            })
         })
+
+
+        function slider() {
+            var minuto = Number($('#sliderRange').val());
+            if (minuto == 12) {
+                var hora = $('#slider').val()
+                var textoHora = hora;
+                $('#TimeDisplay').text(textoHora)
+                var textoMinuto = "0";
+                if (textoMinuto == "0")
+                    textoMinuto += "0";
+                $('#minutosHora').text(textoMinuto)
+            } else {
+                var addHoras = parseInt((minuto / 6)) - 2;
+                var minutos = (minuto % 6) * 10;
+                var textoHoras = Number($('#slider').val()) + addHoras;
+                $('#TimeDisplay').text(textoHoras)
+                if (minutos == "0")
+                    minutos += "0";
+                $('#minutosHora').text(minutos)
+            }
+            submitBotao()
+        }
+
     </script>
 
 </body>
