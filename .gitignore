@@ -1,0 +1,28 @@
+# .NET
+bin/
+obj/
+.vs/
+packages/
+*.user
+*.suo
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Dados brutos do coletor (vivem no repositório de dados)
+data/raw/
+
+# Parquet gerado a partir de coleta ao vivo (artefato de build)
+data/curated/observations-live-*.parquet
+
+# Segredos e configuração local
+appsettings.Local.json
+appsettings.*.Local.json
+.env
+.env.local
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
