@@ -26,3 +26,6 @@ appsettings.*.Local.json
 # Sistema operacional
 Thumbs.db
 .DS_Store
+
+# Dados coletados localmente durante testes do coletor
+data/raw/

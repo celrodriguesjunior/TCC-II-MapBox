@@ -1,4 +1,4 @@
-namespace Tcc.Probe;
+namespace Tcc.Domain;
 
 /// <summary>Ponto geográfico em graus decimais (WGS84).</summary>
 public readonly record struct GeoPoint(double Lat, double Lon)

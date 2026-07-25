@@ -1,3 +1,4 @@
+using Tcc.Domain;
 using Tcc.Probe;
 using Xunit;
 

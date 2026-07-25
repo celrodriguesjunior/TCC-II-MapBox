@@ -1,0 +1,428 @@
+{
+    "schema_version":  1,
+    "probed_at_utc":  "2026-07-25T03:21:46.1576540+00:00",
+    "weather_lat":  -27.13232,
+    "weather_lon":  -48.95493,
+    "segments":  [
+                     {
+                         "id":  "avenida-ernesto-werner-1414850525-005",
+                         "street_name":  "Avenida Ernesto Werner",
+                         "highway":  "secondary",
+                         "lat":  -27.1130002,
+                         "lon":  -48.9445263,
+                         "tier":  "Coletora",
+                         "osm_way_id":  1414850525,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-ernesto-werner-1416359734-000",
+                         "street_name":  "Avenida Ernesto Werner",
+                         "highway":  "secondary",
+                         "lat":  -27.1136556,
+                         "lon":  -48.9441964,
+                         "tier":  "Coletora",
+                         "osm_way_id":  1416359734,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-ernesto-werner-1416359734-001",
+                         "street_name":  "Avenida Ernesto Werner",
+                         "highway":  "secondary",
+                         "lat":  -27.1158852,
+                         "lon":  -48.9407624,
+                         "tier":  "Coletora",
+                         "osm_way_id":  1416359734,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-ernesto-werner-1416359734-002",
+                         "street_name":  "Avenida Ernesto Werner",
+                         "highway":  "secondary",
+                         "lat":  -27.1147825,
+                         "lon":  -48.9371352,
+                         "tier":  "Coletora",
+                         "osm_way_id":  1416359734,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-ernesto-werner-1416359734-003",
+                         "street_name":  "Avenida Ernesto Werner",
+                         "highway":  "secondary",
+                         "lat":  -27.1186045,
+                         "lon":  -48.9364327,
+                         "tier":  "Coletora",
+                         "osm_way_id":  1416359734,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-ernesto-werner-1416359734-004",
+                         "street_name":  "Avenida Ernesto Werner",
+                         "highway":  "secondary",
+                         "lat":  -27.1222336,
+                         "lon":  -48.9376956,
+                         "tier":  "Coletora",
+                         "osm_way_id":  1416359734,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-pastor-gilmar-doerner-370371511-009",
+                         "street_name":  "Avenida Pastor Gilmar Doerner",
+                         "highway":  "secondary",
+                         "lat":  -27.1064728,
+                         "lon":  -48.9375710,
+                         "tier":  "Coletora",
+                         "osm_way_id":  370371511,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-pastor-gilmar-doerner-370371511-010",
+                         "street_name":  "Avenida Pastor Gilmar Doerner",
+                         "highway":  "secondary",
+                         "lat":  -27.1032685,
+                         "lon":  -48.9347581,
+                         "tier":  "Coletora",
+                         "osm_way_id":  370371511,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-pastor-gilmar-doerner-370371511-011",
+                         "street_name":  "Avenida Pastor Gilmar Doerner",
+                         "highway":  "secondary",
+                         "lat":  -27.1000551,
+                         "lon":  -48.9329774,
+                         "tier":  "Coletora",
+                         "osm_way_id":  370371511,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-pastor-gilmar-doerner-370371511-012",
+                         "street_name":  "Avenida Pastor Gilmar Doerner",
+                         "highway":  "secondary",
+                         "lat":  -27.0983216,
+                         "lon":  -48.9289842,
+                         "tier":  "Coletora",
+                         "osm_way_id":  370371511,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "avenida-pastor-gilmar-doerner-370371511-013",
+                         "street_name":  "Avenida Pastor Gilmar Doerner",
+                         "highway":  "secondary",
+                         "lat":  -27.1014691,
+                         "lon":  -48.9259588,
+                         "tier":  "Coletora",
+                         "osm_way_id":  370371511,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rodovia-pedro-merÃ­zio-503298636-016",
+                         "street_name":  "Rodovia Pedro MerÃ­zio",
+                         "highway":  "secondary",
+                         "lat":  -27.1463494,
+                         "lon":  -48.9723721,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  503298636,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rodovia-pedro-merÃ­zio-503298636-017",
+                         "street_name":  "Rodovia Pedro MerÃ­zio",
+                         "highway":  "secondary",
+                         "lat":  -27.1481420,
+                         "lon":  -48.9777879,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  503298636,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rodovia-pedro-merÃ­zio-503298636-018",
+                         "street_name":  "Rodovia Pedro MerÃ­zio",
+                         "highway":  "secondary",
+                         "lat":  -27.1527233,
+                         "lon":  -48.9808283,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  503298636,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rodovia-pedro-merÃ­zio-503298636-019",
+                         "street_name":  "Rodovia Pedro MerÃ­zio",
+                         "highway":  "secondary",
+                         "lat":  -27.1555280,
+                         "lon":  -48.9855328,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  503298636,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rodovia-pedro-merÃ­zio-503298636-020",
+                         "street_name":  "Rodovia Pedro MerÃ­zio",
+                         "highway":  "secondary",
+                         "lat":  -27.1587629,
+                         "lon":  -48.9902892,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  503298636,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rodovia-pedro-merÃ­zio-503298636-021",
+                         "street_name":  "Rodovia Pedro MerÃ­zio",
+                         "highway":  "secondary",
+                         "lat":  -27.1621985,
+                         "lon":  -48.9948858,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  503298636,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-botuverÃ¡-545829428-050",
+                         "street_name":  "Rua BotuverÃ¡",
+                         "highway":  "secondary",
+                         "lat":  -27.1439486,
+                         "lon":  -48.9597734,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  545829428,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-botuverÃ¡-545829429-045",
+                         "street_name":  "Rua BotuverÃ¡",
+                         "highway":  "secondary",
+                         "lat":  -27.1439472,
+                         "lon":  -48.9602768,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  545829429,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-botuverÃ¡-575278928-047",
+                         "street_name":  "Rua BotuverÃ¡",
+                         "highway":  "secondary",
+                         "lat":  -27.1439369,
+                         "lon":  -48.9594062,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  575278928,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-do-cedro-1069443794-203",
+                         "street_name":  "Rua do Cedro",
+                         "highway":  "secondary",
+                         "lat":  -27.1387098,
+                         "lon":  -48.9516864,
+                         "tier":  "Coletora",
+                         "osm_way_id":  1069443794,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-do-cedro-1069443795-201",
+                         "street_name":  "Rua do Cedro",
+                         "highway":  "secondary",
+                         "lat":  -27.1389627,
+                         "lon":  -48.9524233,
+                         "tier":  "Coletora",
+                         "osm_way_id":  1069443795,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-do-cedro-1069443795-202",
+                         "street_name":  "Rua do Cedro",
+                         "highway":  "secondary",
+                         "lat":  -27.1434602,
+                         "lon":  -48.9581295,
+                         "tier":  "Coletora",
+                         "osm_way_id":  1069443795,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-do-cedro-307671787-197",
+                         "street_name":  "Rua do Cedro",
+                         "highway":  "secondary",
+                         "lat":  -27.1305473,
+                         "lon":  -48.9409764,
+                         "tier":  "Coletora",
+                         "osm_way_id":  307671787,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-do-cedro-307671787-198",
+                         "street_name":  "Rua do Cedro",
+                         "highway":  "secondary",
+                         "lat":  -27.1326066,
+                         "lon":  -48.9450206,
+                         "tier":  "Coletora",
+                         "osm_way_id":  307671787,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-do-cedro-307671787-199",
+                         "street_name":  "Rua do Cedro",
+                         "highway":  "secondary",
+                         "lat":  -27.1353677,
+                         "lon":  -48.9483590,
+                         "tier":  "Coletora",
+                         "osm_way_id":  307671787,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-do-cedro-307671787-200",
+                         "street_name":  "Rua do Cedro",
+                         "highway":  "secondary",
+                         "lat":  -27.1384333,
+                         "lon":  -48.9509601,
+                         "tier":  "Coletora",
+                         "osm_way_id":  307671787,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-ernesto-bianchini-575169149-071",
+                         "street_name":  "Rua Ernesto Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1426840,
+                         "lon":  -48.9721823,
+                         "tier":  "Espinha",
+                         "osm_way_id":  575169149,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-ernesto-bianchini-575169149-072",
+                         "street_name":  "Rua Ernesto Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1388646,
+                         "lon":  -48.9707473,
+                         "tier":  "Espinha",
+                         "osm_way_id":  575169149,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-ernesto-bianchini-575169149-073",
+                         "street_name":  "Rua Ernesto Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1356385,
+                         "lon":  -48.9680529,
+                         "tier":  "Espinha",
+                         "osm_way_id":  575169149,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-ernesto-bianchini-575169149-074",
+                         "street_name":  "Rua Ernesto Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1316398,
+                         "lon":  -48.9664336,
+                         "tier":  "Espinha",
+                         "osm_way_id":  575169149,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-ernesto-bianchini-575169149-075",
+                         "street_name":  "Rua Ernesto Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1283697,
+                         "lon":  -48.9633682,
+                         "tier":  "Espinha",
+                         "osm_way_id":  575169149,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-ernesto-bianchini-575169149-076",
+                         "street_name":  "Rua Ernesto Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1283164,
+                         "lon":  -48.9593171,
+                         "tier":  "Espinha",
+                         "osm_way_id":  575169149,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-ernesto-bianchini-575169149-077",
+                         "street_name":  "Rua Ernesto Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1301396,
+                         "lon":  -48.9551005,
+                         "tier":  "Espinha",
+                         "osm_way_id":  575169149,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-guilherme-alberto-frederico-hoeffelmann-399701525-088",
+                         "street_name":  "Rua Guilherme Alberto Frederico Hoeffelmann",
+                         "highway":  "residential",
+                         "lat":  -27.1218327,
+                         "lon":  -48.9394729,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  399701525,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-joÃ£o-bianchini-367246586-108",
+                         "street_name":  "Rua JoÃ£o Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1383926,
+                         "lon":  -48.9514128,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  367246586,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-joÃ£o-bianchini-367246589-105",
+                         "street_name":  "Rua JoÃ£o Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1373167,
+                         "lon":  -48.9517361,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  367246589,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-joÃ£o-bianchini-367246589-106",
+                         "street_name":  "Rua JoÃ£o Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1318691,
+                         "lon":  -48.9515425,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  367246589,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-joÃ£o-bianchini-531501649-107",
+                         "street_name":  "Rua JoÃ£o Bianchini",
+                         "highway":  "tertiary",
+                         "lat":  -27.1379388,
+                         "lon":  -48.9516115,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  531501649,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-loduvico-mÃ©rico-35894637-119",
+                         "street_name":  "Rua Loduvico MÃ©rico",
+                         "highway":  "tertiary",
+                         "lat":  -27.1445839,
+                         "lon":  -48.9588071,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  35894637,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-loduvico-mÃ©rico-912692918-122",
+                         "street_name":  "Rua Loduvico MÃ©rico",
+                         "highway":  "tertiary",
+                         "lat":  -27.1441594,
+                         "lon":  -48.9587156,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  912692918,
+                         "probe_confidence":  1
+                     },
+                     {
+                         "id":  "rua-loduvico-mÃ©rico-912692919-121",
+                         "street_name":  "Rua Loduvico MÃ©rico",
+                         "highway":  "tertiary",
+                         "lat":  -27.1441532,
+                         "lon":  -48.9586589,
+                         "tier":  "Secundaria",
+                         "osm_way_id":  912692919,
+                         "probe_confidence":  1
+                     }
+                 ]
+}

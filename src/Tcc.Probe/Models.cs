@@ -1,3 +1,4 @@
+using Tcc.Domain;
 namespace Tcc.Probe;
 
 /// <summary>Retângulo geográfico de busca.</summary>

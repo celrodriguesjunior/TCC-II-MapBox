@@ -1,3 +1,4 @@
+using Tcc.Domain;
 using System.Globalization;
 using Microsoft.Extensions.Configuration;
 using Tcc.Probe;
@@ -208,9 +209,12 @@ var geoJsonPath = Path.Combine(options.OutputDirectory, "candidates.geojson");
 var ndjsonPath = Path.Combine(options.OutputDirectory, "probe-raw.ndjson");
 var reportPath = Path.Combine(options.OutputDirectory, "probe-report.md");
 
+var segmentsPath = Path.Combine(options.OutputDirectory, "segments.json");
+
 await Reporter.WriteGeoJsonAsync(geoJsonPath, results, CancellationToken.None);
 await Reporter.WriteNdjsonAsync(ndjsonPath, results, CancellationToken.None);
 await Reporter.WriteMarkdownAsync(reportPath, results, options, CancellationToken.None);
+await SegmentsWriter.WriteAsync(segmentsPath, results, CancellationToken.None);
 
 Console.WriteLine("\nResumo");
 foreach (var group in results.GroupBy(r => r.Verdict).OrderByDescending(g => g.Count()))
@@ -226,7 +230,7 @@ if (accepted > 0)
         $"\n  {accepted} segmentos aceitos → {cycles} ciclos/dia → um a cada {1440.0 / cycles:F1} min"));
 }
 
-Console.WriteLine($"\nArtefatos:\n  {geoJsonPath}\n  {ndjsonPath}\n  {reportPath}");
+Console.WriteLine($"\nArtefatos:\n  {geoJsonPath}\n  {ndjsonPath}\n  {reportPath}\n  {segmentsPath}");
 Console.WriteLine("\nAbra o candidates.geojson num mapa e confira os aceitos contra o que você conhece do bairro.");
 
 return 0;
