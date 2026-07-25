@@ -20,6 +20,10 @@ public static class Evaluator
         {
             var budget = options.MaxPointsPerStreet;
 
+            // Todos os trechos desta rua, para a validação geométrica comparar contra a via
+            // inteira e não contra o fragmento de onde o ponto saiu.
+            var streetGeometries = street.Select(w => w.Geometry).ToArray();
+
             foreach (var way in street.OrderByDescending(w => w.LengthMeters))
             {
                 if (budget <= 0)
@@ -39,7 +43,8 @@ public static class Evaluator
                         CultureInfo.InvariantCulture,
                         $"{Slug(street.Key)}-{way.Id}-{candidates.Count:D3}");
 
-                    candidates.Add(new Candidate(id, street.Key, way.Highway, way.Id, point, way.Geometry));
+                    candidates.Add(new Candidate(
+                        id, street.Key, way.Highway, way.Id, point, way.Geometry, streetGeometries));
                     budget--;
                 }
             }
@@ -87,13 +92,34 @@ public static class Evaluator
                 response.HttpStatus, null, null, null, now);
         }
 
-        // Quão longe ficou o segmento casado do ponto que pedimos.
+        // Primeiro teste: a TomTom respondeu sobre o lugar pedido?
         var queryToMatched = Geo.DistanceToPolyline(candidate.QueryPoint, segment.MatchedGeometry);
 
-        // Quanto do segmento casado se sobrepõe à via que pedimos. É esta métrica que separa
-        // "dado da rua certa" de "dado da avenida a 200 m dali".
-        var distances = segment.MatchedGeometry
-            .Select(p => Geo.DistanceToPolyline(p, candidate.OsmGeometry))
+        if (queryToMatched > options.MaxQueryToMatchedMeters)
+        {
+            var dist = queryToMatched.ToString("F0", CultureInfo.InvariantCulture);
+            var max = options.MaxQueryToMatchedMeters.ToString("F0", CultureInfo.InvariantCulture);
+
+            return new ProbeResult(candidate, Verdict.GeometriaDivergente,
+                $"o segmento casado está a {dist} m do ponto consultado (máximo {max} m)",
+                segment, response.HttpStatus, queryToMatched, null, null, now);
+        }
+
+        // Segundo teste: nas imediações do ponto, a geometria casada acompanha a via pedida?
+        //
+        // Só a vizinhança é avaliada. A TomTom devolve o segmento inteiro em que o ponto cai, e
+        // ele frequentemente extrapola o recorte — medir a extensão toda reprovaria casamentos
+        // corretos apenas por serem longos. E a comparação é contra todos os trechos da rua,
+        // porque no OSM uma via vem partida em vários ways.
+        // A amostragem é feita ao longo da linha, não sobre seus vértices: assim o veredito não
+        // depende de quantos vértices o provedor resolveu devolver. Uma via transversal que só
+        // toca o ponto no cruzamento é reprovada, porque as amostras vizinhas se afastam da rua.
+        var centerAlong = Geo.DistanceAlongToClosest(segment.MatchedGeometry, candidate.QueryPoint);
+        var local = Geo.SampleWindow(
+            segment.MatchedGeometry, centerAlong, options.LocalWindowMeters, options.SampleStepMeters);
+
+        var distances = local
+            .Select(p => Geo.DistanceToPolylines(p, candidate.StreetGeometries))
             .OrderBy(d => d)
             .ToArray();
 
@@ -108,9 +134,10 @@ public static class Evaluator
             var pct = within.ToString("P0", CultureInfo.InvariantCulture);
             var tol = options.ToleranceMeters.ToString("F0", CultureInfo.InvariantCulture);
             var med = median.ToString("F0", CultureInfo.InvariantCulture);
+            var win = options.LocalWindowMeters.ToString("F0", CultureInfo.InvariantCulture);
             var reason =
-                $"apenas {pct} da geometria casada está a até {tol} m da via pedida (mediana {med} m) " +
-                "— a TomTom provavelmente encaixou em outra via";
+                $"nos {win} m em torno do ponto, apenas {pct} da geometria casada está a até {tol} m " +
+                $"da rua pedida (mediana {med} m) — provavelmente é a via transversal";
 
             return new ProbeResult(candidate, Verdict.GeometriaDivergente, reason, segment,
                 response.HttpStatus, queryToMatched, median, within, now);

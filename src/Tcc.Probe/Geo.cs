@@ -104,6 +104,114 @@ public static class Geo
     }
 
     /// <summary>
+    /// Distância percorrida ao longo da polilinha até o ponto de maior aproximação de
+    /// <paramref name="p"/>. Localiza onde, dentro do segmento, o ponto consultado se encaixa.
+    /// </summary>
+    public static double DistanceAlongToClosest(IReadOnlyList<GeoPoint> line, GeoPoint p)
+    {
+        if (line.Count < 2)
+        {
+            return 0;
+        }
+
+        var mPerDegLat = 111_132.0;
+        var mPerDegLon = 111_320.0 * Math.Cos(p.Lat * DegToRad);
+
+        double X(GeoPoint q) => (q.Lon - p.Lon) * mPerDegLon;
+        double Y(GeoPoint q) => (q.Lat - p.Lat) * mPerDegLat;
+
+        var best = double.PositiveInfinity;
+        var bestAlong = 0.0;
+        var travelled = 0.0;
+
+        for (var i = 1; i < line.Count; i++)
+        {
+            double ax = X(line[i - 1]), ay = Y(line[i - 1]);
+            double bx = X(line[i]), by = Y(line[i]);
+
+            var dx = bx - ax;
+            var dy = by - ay;
+            var lenSq = (dx * dx) + (dy * dy);
+            var segment = Distance(line[i - 1], line[i]);
+
+            var t = lenSq < 1e-9 ? 0 : Math.Clamp(-((ax * dx) + (ay * dy)) / lenSq, 0.0, 1.0);
+            var cx = ax + (t * dx);
+            var cy = ay + (t * dy);
+            var d = Math.Sqrt((cx * cx) + (cy * cy));
+
+            if (d < best)
+            {
+                best = d;
+                bestAlong = travelled + (t * segment);
+            }
+
+            travelled += segment;
+        }
+
+        return bestAlong;
+    }
+
+    /// <summary>
+    /// Pontos amostrados ao longo da polilinha numa janela em torno da posição
+    /// <paramref name="centerAlong"/>, a cada <paramref name="stepMeters"/>.
+    ///
+    /// Amostrar a linha, e não seus vértices, torna a comparação independente da densidade de
+    /// vértices que o provedor devolve — um segmento com 3 vértices e outro com 300 são
+    /// avaliados do mesmo jeito.
+    /// </summary>
+    public static List<GeoPoint> SampleWindow(
+        IReadOnlyList<GeoPoint> line,
+        double centerAlong,
+        double halfWindowMeters,
+        double stepMeters)
+    {
+        var samples = new List<GeoPoint>();
+        if (line.Count == 0)
+        {
+            return samples;
+        }
+        if (line.Count == 1)
+        {
+            samples.Add(line[0]);
+            return samples;
+        }
+
+        var total = Length(line);
+        var from = Math.Max(0, centerAlong - halfWindowMeters);
+        var to = Math.Min(total, centerAlong + halfWindowMeters);
+
+        for (var s = from; s <= to; s += stepMeters)
+        {
+            samples.Add(PointAtDistance(line, s));
+        }
+
+        if (samples.Count == 0)
+        {
+            samples.Add(PointAtDistance(line, centerAlong));
+        }
+
+        return samples;
+    }
+
+    /// <summary>
+    /// Menor distância entre um ponto e um conjunto de polilinhas — usado para comparar contra
+    /// uma rua inteira, que no OSM costuma vir partida em vários trechos.
+    /// </summary>
+    public static double DistanceToPolylines(GeoPoint p, IReadOnlyList<IReadOnlyList<GeoPoint>> lines)
+    {
+        var best = double.PositiveInfinity;
+        foreach (var line in lines)
+        {
+            var d = DistanceToPolyline(p, line);
+            if (d < best)
+            {
+                best = d;
+            }
+        }
+        return best;
+    }
+
+    /// <summary>
     /// Pontos amostrados ao longo da polilinha, espaçados de <paramref name="spacingMeters"/> e
     /// recuados de <paramref name="edgeMarginMeters"/> das extremidades.
     ///

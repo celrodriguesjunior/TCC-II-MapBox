@@ -27,13 +27,20 @@ public sealed record OsmWay(
 }
 
 /// <summary>Ponto candidato a virar segmento monitorado.</summary>
+/// <param name="OsmGeometry">O trecho específico de onde o ponto foi amostrado.</param>
+/// <param name="StreetGeometries">
+/// Todos os trechos da mesma rua. A comparação com o que a TomTom devolve tem que ser contra a
+/// rua inteira: no OSM uma via costuma vir partida em vários ways, e a TomTom devolve um
+/// segmento contínuo que atravessa essa divisão.
+/// </param>
 public sealed record Candidate(
     string Id,
     string StreetName,
     string Highway,
     long OsmWayId,
     GeoPoint QueryPoint,
-    IReadOnlyList<GeoPoint> OsmGeometry);
+    IReadOnlyList<GeoPoint> OsmGeometry,
+    IReadOnlyList<IReadOnlyList<GeoPoint>> StreetGeometries);
 
 /// <summary>Resposta útil do flowSegmentData da TomTom.</summary>
 public sealed record FlowSegment(
@@ -114,6 +121,24 @@ public sealed record ProbeOptions
 
     /// <summary>Fração mínima de pontos casados dentro da tolerância.</summary>
     public double MinFractionWithinTolerance { get; init; } = 0.70;
+
+    /// <summary>
+    /// Raio, em torno do ponto consultado, dentro do qual a geometria casada é avaliada.
+    ///
+    /// A TomTom devolve o segmento inteiro em que o ponto cai, e ele costuma ser bem mais longo
+    /// que o recorte — comparar a extensão toda reprova casamentos corretos só por serem longos.
+    /// O que interessa é se, nas imediações do ponto pedido, a API está sobre a via pedida.
+    /// </summary>
+    public double LocalWindowMeters { get; init; } = 250;
+
+    /// <summary>Passo da amostragem ao longo da geometria casada, dentro da janela local.</summary>
+    public double SampleStepMeters { get; init; } = 10;
+
+    /// <summary>
+    /// Distância máxima entre o ponto consultado e o segmento casado. Acima disto a TomTom
+    /// respondeu sobre outro lugar, e nem vale olhar a forma.
+    /// </summary>
+    public double MaxQueryToMatchedMeters { get; init; } = 25;
 
     /// <summary>Abaixo disto a leitura é tratada como modelada, não medida.</summary>
     public double MinConfidence { get; init; } = 0.50;

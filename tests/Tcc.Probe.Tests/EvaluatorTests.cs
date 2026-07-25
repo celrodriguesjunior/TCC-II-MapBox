@@ -24,7 +24,8 @@ public class EvaluatorTests
         Highway: "residential",
         OsmWayId: 1,
         QueryPoint: new GeoPoint(-27.1223, -48.9529),
-        OsmGeometry: RuaPedida);
+        OsmGeometry: RuaPedida,
+        StreetGeometries: [RuaPedida]);
 
     private static readonly ProbeOptions Options = new();
 
@@ -100,7 +101,79 @@ public class EvaluatorTests
         var resultado = Evaluator.Evaluate(Candidato, resposta, Options);
 
         Assert.Equal(Verdict.GeometriaDivergente, resultado.Verdict);
-        Assert.True(resultado.MedianMatchedToOsmMeters > Options.ToleranceMeters);
+    }
+
+    [Fact]
+    public void SegmentoLongoQueExtrapolaOTrecho_EhAceito()
+    {
+        // Regressão: a TomTom devolve o segmento inteiro em que o ponto cai, tipicamente bem
+        // mais longo que o way do OSM. A versão anterior comparava a extensão toda contra um
+        // único way e reprovava 97% dos pontos — inclusive casamentos com 0,8 m de precisão.
+        GeoPoint[] segmentoLongo =
+        [
+            new(-27.1223, -48.9700),   // muito antes do trecho pedido
+            new(-27.1223, -48.9551),
+            new(-27.1223, -48.9529),   // sobre o ponto consultado
+            new(-27.1223, -48.9507),
+            new(-27.1223, -48.9350),   // muito depois
+        ];
+
+        var resposta = new FlowResponse(200, null, Segmento(segmentoLongo), null);
+
+        var resultado = Evaluator.Evaluate(Candidato, resposta, Options);
+
+        Assert.Equal(Verdict.Aceito, resultado.Verdict);
+    }
+
+    [Fact]
+    public void RuaPartidaEmVariosTrechos_ComparaContraARuaInteira()
+    {
+        // No OSM uma via costuma vir partida. O casamento tem que ser julgado contra a rua toda,
+        // não contra o fragmento de onde o ponto foi amostrado.
+        GeoPoint[] trechoA = [new(-27.1223, -48.9551), new(-27.1223, -48.9529)];
+        GeoPoint[] trechoB = [new(-27.1223, -48.9529), new(-27.1223, -48.9507)];
+
+        var candidato = Candidato with
+        {
+            OsmGeometry = trechoA,
+            StreetGeometries = [trechoA, trechoB],
+        };
+
+        var resposta = new FlowResponse(200, null, Segmento(RuaPedida), null);
+
+        var resultado = Evaluator.Evaluate(candidato, resposta, Options);
+
+        Assert.Equal(Verdict.Aceito, resultado.Verdict);
+    }
+
+    [Fact]
+    public void SegmentoLongeDoPontoConsultado_EhRejeitado()
+    {
+        var resposta = new FlowResponse(200, null, Segmento(RuaVizinha), null);
+
+        var resultado = Evaluator.Evaluate(Candidato, resposta, Options);
+
+        Assert.Equal(Verdict.GeometriaDivergente, resultado.Verdict);
+        Assert.True(resultado.QueryPointToMatchedMeters > Options.MaxQueryToMatchedMeters);
+    }
+
+    [Fact]
+    public void ViaTransversalNoCruzamento_EhRejeitada()
+    {
+        // Perto de cruzamento a TomTom pode encaixar na via transversal: passa exatamente sobre
+        // o ponto, mas segue em outra direção. É o motivo do recuo das extremidades na amostragem.
+        GeoPoint[] transversal =
+        [
+            new(-27.1253, -48.9529),
+            new(-27.1223, -48.9529),   // cruza sobre o ponto consultado
+            new(-27.1193, -48.9529),
+        ];
+
+        var resposta = new FlowResponse(200, null, Segmento(transversal), null);
+
+        var resultado = Evaluator.Evaluate(Candidato, resposta, Options);
+
+        Assert.Equal(Verdict.GeometriaDivergente, resultado.Verdict);
     }
 
     [Fact]
