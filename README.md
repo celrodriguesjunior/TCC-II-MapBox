@@ -84,6 +84,7 @@ Mantida fora deste repositório, em `D:\dev\TCC\documentacao\mapbox`:
 | Documento | Conteúdo |
 |---|---|
 | `README.md` | Índice e estado do projeto |
+| `estrutura-do-projeto.md` | Diagramas — pipeline, árvore, dependências, ciclo de leitura |
 | `arquitetura-v2.md` | O sistema como está construído |
 | `decisoes.md` | Registro de decisões e suas justificativas |
 | `sondagem-cobertura.md` | Método e resultado da validação de cobertura |
