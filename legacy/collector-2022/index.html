@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    getDadosRuaItajai();
+    getDadosAvPresCasteloBranco();
+    getDadosRua7DeSetembro();
+    getDadosRuaNereuRamos();
+    getDadosRuaFlorianoPeixoto();
+    getDadosRuaAmazonas();
+    getDadosRuaAntonioDaVeiga();
+    getDadosRuaEngenheiroPaulWerner();
+    getDadosRuaRepúblicaArgentina();
+    getDadosRuaCurtHering();
+    getDadosRuaDoutorAmadeuDaLuz();
+    getDadosRuaTheodoroHoltrup();
+    getDadosRuaPaulHeining();
+    getDadosRuaPadreJacobs();
+    getDadosRuaCaetanoDeeke();
+    getDadosRuaXVDeNovembro();
+    getDadosRuaAngeloDias();
+    getDadosRuaDrLuizDeFreitasMeiro();
+    getDadosRuaEngRodolfoFerraz();
+    getDadosRuaCelVidalRamos();
+    getDadosRuaAlameidaRioBranco();
+    getDadosRuaPresJohnKenedy();
+    getDadosRuaNamyDeeke();
+    getDadosRuaPresGetulioVargas();
+    getDadosRuaMartinLuther();
+    getDadosRuaSaoPaulo();
+    getDadosRuaPauloZimmermann();
+    getDadosPteAPDeAndrade();
+    getDadosAvBrasil();
+    getDadosRuaParaiba();
+    getDadosRuaMaxHering();
+    getDadosRuaHeinrichHosang();
+    getDadosRuaHumbertoCampos();
+
+    function getDadosRuaItajai() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.916563715868133,-49.05792660840415",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 1;
+                postAPI(dados);
+            });
+    }
+
+    function getDadosAvPresCasteloBranco() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.918770816760464,-49.065900446513716",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 2;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRua7DeSetembro() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.919775279947977,-49.068797232177275",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 3;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaNereuRamos() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.924070455034585,-49.062102438551165",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 4;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaFlorianoPeixoto() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.92380262503567,-49.06444563508514",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 5;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaAmazonas() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.92881950574518,-49.05825539761542",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 6;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaAntonioDaVeiga() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.906712065039613,-49.078479140194204",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 7;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaEngenheiroPaulWerner() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.896680649078398,-49.08196042611838",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 8;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaRepúblicaArgentina() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.916581346175274,-49.06329074155425",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 9;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaCurtHering() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.92103650395346,-49.06555233963728",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 10;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaDoutorAmadeuDaLuz() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.916134440629143,-49.0708721661667",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 11;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaTheodoroHoltrup() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.90604508850689,-49.08643025392805",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 12;
+                postAPI(dados);
+            });
+    }
+
+    function getDadosRuaPaulHeining() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.92145108543909,-49.06556016340889",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 13;
+                postAPI(dados);
+            });
+    }
+
+    function getDadosRuaPadreJacobs() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.92061643737866,-49.066705466660565",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 14;
+                postAPI(dados);
+            });
+    }
+
+    function getDadosRuaCaetanoDeeke() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.921912278511677,-49.064661584200806",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 15;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaXVDeNovembro() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.921244548106717,-49.0632963788271",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 16;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaAngeloDias() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.923670510818784,-49.06330957626495",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 17;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaDrLuizDeFreitasMeiro() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.924402303103776,-49.0630762240737",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 18;
+                postAPI(dados);
+            });
+    }
+
+    function getDadosRuaEngRodolfoFerraz() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.92487103030827,-49.06383528924871",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 19;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaCelVidalRamos() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.925645860800987,-49.06381383157149",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 20;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaAlameidaRioBranco() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.925528679992738,-49.061327423793216",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 21;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaPresJohnKenedy() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.91889213187762,-49.06808722132246",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 22;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaNamyDeeke() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.91818661147699,-49.06880068891983",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 23;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaPresGetulioVargas() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.91682578170627,-49.06941759699835",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 24;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaMartinLuther() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.911637318562782,-49.07037558496595",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 25;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaSaoPaulo() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.911068082804167,-49.07217802944494",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 26;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaPauloZimmermann() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.915416205822556,-49.07134654463699",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 27;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosPteAPDeAndrade() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.912750304372963,-49.06847021580914",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 28;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosAvBrasil() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.91378976213333,-49.066452071896286",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 29;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaParaiba() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.913182269867395,-49.07469986467684",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 30;
+                postAPI(dados);
+            });
+    }
+
+
+    function getDadosRuaMaxHering() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.910154457105197,-49.075693978358345",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 31;
+                postAPI(dados);
+            });
+    }
+
+    function getDadosRuaHeinrichHosang() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.91037449996252,-49.079438342168366",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 32;
+                postAPI(dados);
+            });
+    }
+
+    function getDadosRuaHumbertoCampos() {
+        $.getJSON("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=&point=-26.913048464465316,-49.08141781243552",
+            function (dados) {
+                dados.flowSegmentData.nroRua = 33;
+                postAPI(dados);
+            });
+    }
+
+
+
+    function postAPI(dados) {
+        var produto = {}
+        produto.flowSegmentData = dados.flowSegmentData;
+        $.ajax({
+            url: "http://localhost:47796/api/produto",
+            type: "POST",
+            data: produto,
+            success: function (a, b, c) {
+            },
+            error: function (a, b, c) {
+                console.log(a)
+                console.log(b)
+                console.log(c)
+            }
+        });
+    }
+
+    setInterval(function () {
+        console.log("Exec getDados()")
+        getDadosRuaItajai();
+        getDadosAvPresCasteloBranco();
+        getDadosRua7DeSetembro();
+        getDadosRuaNereuRamos();
+        getDadosRuaFlorianoPeixoto();
+        getDadosRuaAmazonas();
+        getDadosRuaAntonioDaVeiga();
+        getDadosRuaEngenheiroPaulWerner();
+        getDadosRuaRepúblicaArgentina();
+        getDadosRuaCurtHering();
+        getDadosRuaDoutorAmadeuDaLuz();
+        getDadosRuaTheodoroHoltrup();
+        getDadosRuaPaulHeining();
+        getDadosRuaPadreJacobs();
+        getDadosRuaCaetanoDeeke();
+        getDadosRuaXVDeNovembro();
+        getDadosRuaAngeloDias();
+        getDadosRuaDrLuizDeFreitasMeiro();
+        getDadosRuaEngRodolfoFerraz();
+        getDadosRuaCelVidalRamos();
+        getDadosRuaAlameidaRioBranco();
+        getDadosRuaPresJohnKenedy();
+        getDadosRuaNamyDeeke();
+        getDadosRuaPresGetulioVargas();
+        getDadosRuaMartinLuther();
+        getDadosRuaSaoPaulo();
+        getDadosRuaPauloZimmermann();
+        getDadosPteAPDeAndrade();
+        getDadosAvBrasil();
+        getDadosRuaParaiba();
+        getDadosRuaMaxHering();
+        getDadosRuaHeinrichHosang();
+        getDadosRuaHumbertoCampos();
+    }, 600000);
+
+
+    function getDadosClimaRuaItajai() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.916563715868133&lon=-49.05792660840415&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 1;
+                postAPIClima(dados);
+            });
+    }
+
+    function getDadosClimaAvPresCasteloBranco() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.918770816760464&lon=-49.065900446513716&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 2;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRua7DeSetembro() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.919775279947977&lon=-49.068797232177275&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 3;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaNereuRamos() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.924070455034585&lon=-49.062102438551165&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 4;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaFlorianoPeixoto() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.92380262503567&lon=-49.06444563508514&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 5;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaAmazonas() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.92881950574518&lon=-49.05825539761542&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 6;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaAntonioDaVeiga() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.906712065039613&lon=-49.078479140194204&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 7;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaEngenheiroPaulWerner() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.896680649078398&lon=-49.08196042611838&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 8;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaRepúblicaArgentina() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.916581346175274&lon=-49.06329074155425&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 9;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaCurtHering() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.92103650395346&lon=-49.06555233963728&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 10;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaDoutorAmadeuDaLuz() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.916134440629143&lon=-49.0708721661667&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 11;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaTheodoroHoltrup() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.90604508850689&lon=-49.08643025392805&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 12;
+                postAPIClima(dados);
+            });
+    }
+
+    function getDadosClimaRuaPaulHeining() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.92145108543909&lon=-49.06556016340889&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 13;
+                postAPIClima(dados);
+            });
+    }
+
+    function getDadosClimaRuaPadreJacobs() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.92061643737866&lon=-49.066705466660565&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 14;
+                postAPIClima(dados);
+            });
+    }
+
+    function getDadosClimaRuaCaetanoDeeke() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.921912278511677&lon=-49.064661584200806&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 15;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaXVDeNovembro() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.921244548106717&lon=-49.0632963788271&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 16;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaAngeloDias() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.923670510818784&lon=-49.06330957626495&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 17;
+                postAPIClima(dados);
+            });
+    }
+
+    function getDadosClimaRuaDrLuizDeFreitasMeiro() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.924402303103776&lon=-49.0630762240737&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 18;
+                postAPIClima(dados);
+            });
+    }
+
+    function getDadosClimaRuaEngRodolfoFerraz() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.92487103030827&lon=-49.06383528924871&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 19;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaCelVidalRamos() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.925645860800987&lon=-49.06381383157149&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 20;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaAlameidaRioBranco() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.925528679992738&lon=-49.061327423793216&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 21;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaPresJohnKenedy() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.91889213187762&lon=-49.06808722132246&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 22;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaNamyDeeke() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.91818661147699&lon=-49.06880068891983&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 23;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaPresGetulioVargas() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.91682578170627&lon=-49.06941759699835&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 24;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaMartinLuther() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.911637318562782&lon=-49.07037558496595&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 25;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaSaoPaulo() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.911068082804167&lon=-49.07217802944494&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 26;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaPauloZimmermann() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.915416205822556&lon=-49.07134654463699&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 27;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaPteAPDeAndrade() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.912750304372963&lon=-49.06847021580914&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 28;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaAvBrasil() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.91378976213333&lon=-49.066452071896286&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 29;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaParaiba() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.913182269867395&lon=-49.07469986467684&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 30;
+                postAPIClima(dados);
+            });
+    }
+
+
+    function getDadosClimaRuaMaxHering() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.910154457105197&lon=-49.075693978358345&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 31;
+                postAPIClima(dados);
+            });
+    }
+
+    function getDadosClimaRuaHeinrichHosang() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.91037449996252&lon=-49.079438342168366&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 32;
+                postAPIClima(dados);
+            });
+    }
+
+    function getDadosClimaRuaHumbertoCampos() {
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-26.913048464465316&lon=-49.08141781243552&exclude=minutely,hourly,daily,alerts&appid=&units=metric&lang=pt_br",
+            function (dados) {
+                dados.nroRua = 33;
+                postAPIClima(dados);
+            });
+    }
+
+
+    getDadosClimaRuaItajai();
+    getDadosClimaAvPresCasteloBranco();
+    getDadosClimaRua7DeSetembro();
+    getDadosClimaRuaNereuRamos();
+    getDadosClimaRuaFlorianoPeixoto();
+    getDadosClimaRuaAmazonas();
+    getDadosClimaRuaAntonioDaVeiga();
+    getDadosClimaRuaEngenheiroPaulWerner();
+    getDadosClimaRuaRepúblicaArgentina();
+    getDadosClimaRuaCurtHering();
+    getDadosClimaRuaDoutorAmadeuDaLuz();
+    getDadosClimaRuaTheodoroHoltrup();
+    getDadosClimaRuaPaulHeining();
+    getDadosClimaRuaPadreJacobs();
+    getDadosClimaRuaCaetanoDeeke();
+    getDadosClimaRuaXVDeNovembro();
+    getDadosClimaRuaAngeloDias();
+    getDadosClimaRuaDrLuizDeFreitasMeiro();
+    getDadosClimaRuaEngRodolfoFerraz();
+    getDadosClimaRuaCelVidalRamos();
+    getDadosClimaRuaAlameidaRioBranco();
+    getDadosClimaRuaPresJohnKenedy();
+    getDadosClimaRuaNamyDeeke();
+    getDadosClimaRuaPresGetulioVargas();
+    getDadosClimaRuaMartinLuther();
+    getDadosClimaRuaSaoPaulo();
+    getDadosClimaRuaPauloZimmermann();
+    getDadosClimaPteAPDeAndrade();
+    getDadosClimaAvBrasil();
+    getDadosClimaRuaParaiba();
+    getDadosClimaRuaMaxHering();
+    getDadosClimaRuaHeinrichHosang();
+    getDadosClimaRuaHumbertoCampos();
+
+    setInterval(function () {
+        console.log("Exec getDados()")
+        getDadosClimaRuaItajai();
+        getDadosClimaAvPresCasteloBranco();
+        getDadosClimaRua7DeSetembro();
+        getDadosClimaRuaNereuRamos();
+        getDadosClimaRuaFlorianoPeixoto();
+        getDadosClimaRuaAmazonas();
+        getDadosClimaRuaAntonioDaVeiga();
+        getDadosClimaRuaEngenheiroPaulWerner();
+        getDadosClimaRuaRepúblicaArgentina();
+        getDadosClimaRuaCurtHering();
+        getDadosClimaRuaDoutorAmadeuDaLuz();
+        getDadosClimaRuaTheodoroHoltrup();
+        getDadosClimaRuaPaulHeining();
+        getDadosClimaRuaPadreJacobs();
+        getDadosClimaRuaCaetanoDeeke();
+        getDadosClimaRuaXVDeNovembro();
+        getDadosClimaRuaAngeloDias();
+        getDadosClimaRuaDrLuizDeFreitasMeiro();
+        getDadosClimaRuaEngRodolfoFerraz();
+        getDadosClimaRuaCelVidalRamos();
+        getDadosClimaRuaAlameidaRioBranco();
+        getDadosClimaRuaPresJohnKenedy();
+        getDadosClimaRuaNamyDeeke();
+        getDadosClimaRuaPresGetulioVargas();
+        getDadosClimaRuaMartinLuther();
+        getDadosClimaRuaSaoPaulo();
+        getDadosClimaRuaPauloZimmermann();
+        getDadosClimaPteAPDeAndrade();
+        getDadosClimaAvBrasil();
+        getDadosClimaRuaParaiba();
+        getDadosClimaRuaMaxHering();
+        getDadosClimaRuaHeinrichHosang();
+        getDadosClimaRuaHumbertoCampos();
+    }, 600000);
+
+
+    function postAPIClima(dados) {
+        var produto = {};
+        produto.weatherData = dados;
+        $.ajax({
+            url: "http://localhost:47796/api/produto",
+            type: "POST",
+            data: produto,
+            success: function (a, b, c) {
+            },
+            error: function (a, b, c) {
+                console.log(a)
+                console.log(b)
+                console.log(c)
+            }
+        });
+    }
+
+
+
+</script>
+
+</html>
