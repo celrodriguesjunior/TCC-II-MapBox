@@ -300,7 +300,7 @@ static void PrintHelp() => Console.WriteLine("""
       --confirm                Executa de fato as chamadas à TomTom
       --bbox S,W,N,E           Recorte (padrão: Rio Branco, Brusque/SC)
       --spacing METROS         Espaçamento entre pontos na mesma via (padrão 400)
-      --max-per-street N       Teto de pontos por rua (padrão 4)
+      --max-per-street N       Teto de pontos por rua (padrão 8)
       --max-calls N            Teto absoluto de chamadas (padrão 300)
       --tolerance METROS       Distância aceitável entre geometria casada e OSM (padrão 25)
       --min-confidence 0..1    Confiança mínima da leitura (padrão 0.50)

@@ -97,8 +97,14 @@ public sealed record ProbeOptions
     /// <summary>Recuo das extremidades, para evitar cruzamentos.</summary>
     public double EdgeMarginMeters { get; init; } = 40;
 
-    /// <summary>Teto de pontos por nome de rua, para uma via longa não dominar o orçamento.</summary>
-    public int MaxPointsPerStreet { get; init; } = 4;
+    /// <summary>
+    /// Teto de pontos por nome de rua, para uma via longa não dominar o orçamento.
+    ///
+    /// Só é atingido por vias longas: o espaçamento já limita as curtas a um único ponto.
+    /// Com 4, a espinha do bairro (Ernesto Bianchini, 2,8 km) ficava com um ponto a cada 700 m
+    /// — densidade insuficiente justamente onde mais importa ver o congestionamento se propagar.
+    /// </summary>
+    public int MaxPointsPerStreet { get; init; } = 8;
 
     /// <summary>Teto absoluto de chamadas à TomTom nesta execução.</summary>
     public int MaxCalls { get; init; } = 300;

@@ -25,8 +25,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.93954883636502,
-          -27.11519284874871
+          -48.940762359173476,
+          -27.115885235332296
         ]
       },
       "properties": {
@@ -43,8 +43,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.93692727030238,
-          -27.117368928614752
+          -48.93713521594022,
+          -27.11478254578789
         ]
       },
       "properties": {
@@ -61,8 +61,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.93769560955561,
-          -27.122233605125338
+          -48.93643268477233,
+          -27.118604536048387
         ]
       },
       "properties": {
@@ -75,7 +75,79 @@
     },
     {
       "type": "Feature",
-      "id": "avenida-pastor-gilmar-doerner-370371511-004",
+      "id": "avenida-ernesto-werner-1416359734-004",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.93769560955561,
+          -27.122233605125338
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "avenida-ernesto-werner-1416359734-004",
+        "street": "Avenida Ernesto Werner",
+        "highway": "secondary",
+        "osm_way_id": 1416359734
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "avenida-ernesto-werner-1414850525-005",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.94452629198231,
+          -27.113000235126194
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "avenida-ernesto-werner-1414850525-005",
+        "street": "Avenida Ernesto Werner",
+        "highway": "secondary",
+        "osm_way_id": 1414850525
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "avenida-ernesto-werner-1414850525-006",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.94189243746849,
+          -27.107977205070643
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "avenida-ernesto-werner-1414850525-006",
+        "street": "Avenida Ernesto Werner",
+        "highway": "secondary",
+        "osm_way_id": 1414850525
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "avenida-ernesto-werner-1475012135-007",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.944488724581205,
+          -27.11337212839343
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "avenida-ernesto-werner-1475012135-007",
+        "street": "Avenida Ernesto Werner",
+        "highway": "tertiary",
+        "osm_way_id": 1475012135
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "avenida-pastor-gilmar-doerner-370371511-008",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -85,7 +157,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "avenida-pastor-gilmar-doerner-370371511-004",
+        "id": "avenida-pastor-gilmar-doerner-370371511-008",
         "street": "Avenida Pastor Gilmar Doerner",
         "highway": "secondary",
         "osm_way_id": 370371511
@@ -93,17 +165,17 @@
     },
     {
       "type": "Feature",
-      "id": "avenida-pastor-gilmar-doerner-370371511-005",
+      "id": "avenida-pastor-gilmar-doerner-370371511-009",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.935337304167206,
-          -27.104558492185436
+          -48.937571018584535,
+          -27.106472849565957
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "avenida-pastor-gilmar-doerner-370371511-005",
+        "id": "avenida-pastor-gilmar-doerner-370371511-009",
         "street": "Avenida Pastor Gilmar Doerner",
         "highway": "secondary",
         "osm_way_id": 370371511
@@ -111,17 +183,17 @@
     },
     {
       "type": "Feature",
-      "id": "avenida-pastor-gilmar-doerner-370371511-006",
+      "id": "avenida-pastor-gilmar-doerner-370371511-010",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.931732516178556,
-          -27.099208928097777
+          -48.93475812773787,
+          -27.103268531158395
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "avenida-pastor-gilmar-doerner-370371511-006",
+        "id": "avenida-pastor-gilmar-doerner-370371511-010",
         "street": "Avenida Pastor Gilmar Doerner",
         "highway": "secondary",
         "osm_way_id": 370371511
@@ -129,7 +201,43 @@
     },
     {
       "type": "Feature",
-      "id": "avenida-pastor-gilmar-doerner-370371511-007",
+      "id": "avenida-pastor-gilmar-doerner-370371511-011",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.9329774357266,
+          -27.10005506604528
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "avenida-pastor-gilmar-doerner-370371511-011",
+        "street": "Avenida Pastor Gilmar Doerner",
+        "highway": "secondary",
+        "osm_way_id": 370371511
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "avenida-pastor-gilmar-doerner-370371511-012",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.928984248046774,
+          -27.098321594875763
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "avenida-pastor-gilmar-doerner-370371511-012",
+        "street": "Avenida Pastor Gilmar Doerner",
+        "highway": "secondary",
+        "osm_way_id": 370371511
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "avenida-pastor-gilmar-doerner-370371511-013",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -139,7 +247,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "avenida-pastor-gilmar-doerner-370371511-007",
+        "id": "avenida-pastor-gilmar-doerner-370371511-013",
         "street": "Avenida Pastor Gilmar Doerner",
         "highway": "secondary",
         "osm_way_id": 370371511
@@ -147,7 +255,7 @@
     },
     {
       "type": "Feature",
-      "id": "ponte-norberto-fürbringer-1284657426-008",
+      "id": "ponte-norberto-fürbringer-1284657426-014",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -157,7 +265,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "ponte-norberto-fürbringer-1284657426-008",
+        "id": "ponte-norberto-fürbringer-1284657426-014",
         "street": "Ponte Norberto Fürbringer",
         "highway": "secondary",
         "osm_way_id": 1284657426
@@ -165,7 +273,7 @@
     },
     {
       "type": "Feature",
-      "id": "rodovia-pedro-merízio-503298636-009",
+      "id": "rodovia-pedro-merízio-503298636-015",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -175,7 +283,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rodovia-pedro-merízio-503298636-009",
+        "id": "rodovia-pedro-merízio-503298636-015",
         "street": "Rodovia Pedro Merízio",
         "highway": "secondary",
         "osm_way_id": 503298636
@@ -183,17 +291,17 @@
     },
     {
       "type": "Feature",
-      "id": "rodovia-pedro-merízio-503298636-010",
+      "id": "rodovia-pedro-merízio-503298636-016",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.97896150288681,
-          -27.149585164996232
+          -48.972372118624094,
+          -27.146349420667207
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rodovia-pedro-merízio-503298636-010",
+        "id": "rodovia-pedro-merízio-503298636-016",
         "street": "Rodovia Pedro Merízio",
         "highway": "secondary",
         "osm_way_id": 503298636
@@ -201,17 +309,17 @@
     },
     {
       "type": "Feature",
-      "id": "rodovia-pedro-merízio-503298636-011",
+      "id": "rodovia-pedro-merízio-503298636-017",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.988732683922926,
-          -27.157642655638554
+          -48.97778786905471,
+          -27.148141994659692
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rodovia-pedro-merízio-503298636-011",
+        "id": "rodovia-pedro-merízio-503298636-017",
         "street": "Rodovia Pedro Merízio",
         "highway": "secondary",
         "osm_way_id": 503298636
@@ -219,7 +327,79 @@
     },
     {
       "type": "Feature",
-      "id": "rodovia-pedro-merízio-503298636-012",
+      "id": "rodovia-pedro-merízio-503298636-018",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.980828335031575,
+          -27.1527233203374
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rodovia-pedro-merízio-503298636-018",
+        "street": "Rodovia Pedro Merízio",
+        "highway": "secondary",
+        "osm_way_id": 503298636
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rodovia-pedro-merízio-503298636-019",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.985532849016316,
+          -27.155528042121116
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rodovia-pedro-merízio-503298636-019",
+        "street": "Rodovia Pedro Merízio",
+        "highway": "secondary",
+        "osm_way_id": 503298636
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rodovia-pedro-merízio-503298636-020",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.99028916923878,
+          -27.158762924417264
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rodovia-pedro-merízio-503298636-020",
+        "street": "Rodovia Pedro Merízio",
+        "highway": "secondary",
+        "osm_way_id": 503298636
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rodovia-pedro-merízio-503298636-021",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.99488579138168,
+          -27.16219851258289
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rodovia-pedro-merízio-503298636-021",
+        "street": "Rodovia Pedro Merízio",
+        "highway": "secondary",
+        "osm_way_id": 503298636
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rodovia-pedro-merízio-503298636-022",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -229,7 +409,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rodovia-pedro-merízio-503298636-012",
+        "id": "rodovia-pedro-merízio-503298636-022",
         "street": "Rodovia Pedro Merízio",
         "highway": "secondary",
         "osm_way_id": 503298636
@@ -237,7 +417,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-adão-schwartz-399701544-013",
+      "id": "rua-adão-schwartz-399701544-023",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -247,7 +427,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-adão-schwartz-399701544-013",
+        "id": "rua-adão-schwartz-399701544-023",
         "street": "Rua Adão Schwartz",
         "highway": "residential",
         "osm_way_id": 399701544
@@ -255,7 +435,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-aires-horn-399701536-014",
+      "id": "rua-aires-horn-399701536-024",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -265,7 +445,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-aires-horn-399701536-014",
+        "id": "rua-aires-horn-399701536-024",
         "street": "Rua Aires Horn",
         "highway": "residential",
         "osm_way_id": 399701536
@@ -273,7 +453,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-alaýde-schlindwein-314601366-015",
+      "id": "rua-alaýde-schlindwein-314601366-025",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -283,7 +463,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-alaýde-schlindwein-314601366-015",
+        "id": "rua-alaýde-schlindwein-314601366-025",
         "street": "Rua Alaýde Schlindwein",
         "highway": "residential",
         "osm_way_id": 314601366
@@ -291,7 +471,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-alberto-petermann-399701549-016",
+      "id": "rua-alberto-petermann-399701549-026",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -301,7 +481,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-alberto-petermann-399701549-016",
+        "id": "rua-alberto-petermann-399701549-026",
         "street": "Rua Alberto Petermann",
         "highway": "residential",
         "osm_way_id": 399701549
@@ -309,7 +489,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-amando-hochsprung-314601367-017",
+      "id": "rua-amando-hochsprung-314601367-027",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -319,7 +499,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-amando-hochsprung-314601367-017",
+        "id": "rua-amando-hochsprung-314601367-027",
         "street": "Rua Amando Hochsprung",
         "highway": "residential",
         "osm_way_id": 314601367
@@ -327,7 +507,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-ana-knopp-314601369-018",
+      "id": "rua-ana-knopp-314601369-028",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -337,7 +517,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-ana-knopp-314601369-018",
+        "id": "rua-ana-knopp-314601369-028",
         "street": "Rua Ana Knopp",
         "highway": "residential",
         "osm_way_id": 314601369
@@ -345,7 +525,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-anna-heil-314601374-019",
+      "id": "rua-anna-heil-314601374-029",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -355,7 +535,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-anna-heil-314601374-019",
+        "id": "rua-anna-heil-314601374-029",
         "street": "Rua Anna Heil",
         "highway": "residential",
         "osm_way_id": 314601374
@@ -363,7 +543,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-anna-heil-314601374-020",
+      "id": "rua-anna-heil-314601374-030",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -373,7 +553,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-anna-heil-314601374-020",
+        "id": "rua-anna-heil-314601374-030",
         "street": "Rua Anna Heil",
         "highway": "residential",
         "osm_way_id": 314601374
@@ -381,7 +561,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-antônio-groh-399701530-021",
+      "id": "rua-antônio-groh-399701530-031",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -391,7 +571,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-antônio-groh-399701530-021",
+        "id": "rua-antônio-groh-399701530-031",
         "street": "Rua Antônio Groh",
         "highway": "residential",
         "osm_way_id": 399701530
@@ -399,7 +579,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-augusta-hort-575278926-022",
+      "id": "rua-augusta-hort-575278926-032",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -409,7 +589,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-augusta-hort-575278926-022",
+        "id": "rua-augusta-hort-575278926-032",
         "street": "Rua Augusta Hort",
         "highway": "residential",
         "osm_way_id": 575278926
@@ -417,7 +597,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-augusto-ries-399707210-023",
+      "id": "rua-augusto-ries-399707210-033",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -427,7 +607,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-augusto-ries-399707210-023",
+        "id": "rua-augusto-ries-399707210-033",
         "street": "Rua Augusto Ries",
         "highway": "residential",
         "osm_way_id": 399707210
@@ -435,7 +615,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-augusto-ries-399707210-024",
+      "id": "rua-augusto-ries-399707210-034",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -445,7 +625,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-augusto-ries-399707210-024",
+        "id": "rua-augusto-ries-399707210-034",
         "street": "Rua Augusto Ries",
         "highway": "residential",
         "osm_way_id": 399707210
@@ -453,7 +633,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-beija-flor-399701561-025",
+      "id": "rua-beija-flor-399701561-035",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -463,7 +643,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-beija-flor-399701561-025",
+        "id": "rua-beija-flor-399701561-035",
         "street": "Rua Beija-Flor",
         "highway": "residential",
         "osm_way_id": 399701561
@@ -471,7 +651,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-beira-rio-307671789-026",
+      "id": "rua-beira-rio-307671789-036",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -481,7 +661,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-beira-rio-307671789-026",
+        "id": "rua-beira-rio-307671789-036",
         "street": "Rua Beira Rio",
         "highway": "tertiary",
         "osm_way_id": 307671789
@@ -489,17 +669,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-beira-rio-307671789-027",
+      "id": "rua-beira-rio-307671789-037",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.95768323215191,
-          -27.132032581667886
+          -48.95665723377786,
+          -27.13308625091056
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-beira-rio-307671789-027",
+        "id": "rua-beira-rio-307671789-037",
         "street": "Rua Beira Rio",
         "highway": "tertiary",
         "osm_way_id": 307671789
@@ -507,17 +687,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-beira-rio-307671789-028",
+      "id": "rua-beira-rio-307671789-038",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.963435676959236,
-          -27.132983253126717
+          -48.96072265136747,
+          -27.131531818863984
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-beira-rio-307671789-028",
+        "id": "rua-beira-rio-307671789-038",
         "street": "Rua Beira Rio",
         "highway": "tertiary",
         "osm_way_id": 307671789
@@ -525,7 +705,25 @@
     },
     {
       "type": "Feature",
-      "id": "rua-beira-rio-307671789-029",
+      "id": "rua-beira-rio-307671789-039",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.96465652942433,
+          -27.133884752861402
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-beira-rio-307671789-039",
+        "street": "Rua Beira Rio",
+        "highway": "tertiary",
+        "osm_way_id": 307671789
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-beira-rio-307671789-040",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -535,7 +733,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-beira-rio-307671789-029",
+        "id": "rua-beira-rio-307671789-040",
         "street": "Rua Beira Rio",
         "highway": "tertiary",
         "osm_way_id": 307671789
@@ -543,7 +741,61 @@
     },
     {
       "type": "Feature",
-      "id": "rua-benno-hodecker-399709299-030",
+      "id": "rua-beira-rio-503298665-041",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.965962778386206,
+          -27.13864015822691
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-beira-rio-503298665-041",
+        "street": "Rua Beira Rio",
+        "highway": "residential",
+        "osm_way_id": 503298665
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-beira-rio-503298665-042",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.966200162237264,
+          -27.141447664488776
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-beira-rio-503298665-042",
+        "street": "Rua Beira Rio",
+        "highway": "residential",
+        "osm_way_id": 503298665
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-beira-rio-503298660-043",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.95550863147457,
+          -27.139256733575607
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-beira-rio-503298660-043",
+        "street": "Rua Beira Rio",
+        "highway": "tertiary",
+        "osm_way_id": 503298660
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-benno-hodecker-399709299-044",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -553,7 +805,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-benno-hodecker-399709299-030",
+        "id": "rua-benno-hodecker-399709299-044",
         "street": "Rua Benno Hodecker",
         "highway": "residential",
         "osm_way_id": 399709299
@@ -561,7 +813,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-botuverá-545829429-031",
+      "id": "rua-botuverá-545829429-045",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -571,7 +823,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-botuverá-545829429-031",
+        "id": "rua-botuverá-545829429-045",
         "street": "Rua Botuverá",
         "highway": "secondary",
         "osm_way_id": 545829429
@@ -579,7 +831,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-botuverá-545829429-032",
+      "id": "rua-botuverá-545829429-046",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -589,7 +841,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-botuverá-545829429-032",
+        "id": "rua-botuverá-545829429-046",
         "street": "Rua Botuverá",
         "highway": "secondary",
         "osm_way_id": 545829429
@@ -597,7 +849,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-botuverá-575278928-033",
+      "id": "rua-botuverá-575278928-047",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -607,7 +859,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-botuverá-575278928-033",
+        "id": "rua-botuverá-575278928-047",
         "street": "Rua Botuverá",
         "highway": "secondary",
         "osm_way_id": 575278928
@@ -615,7 +867,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-botuverá-912692917-034",
+      "id": "rua-botuverá-912692917-048",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -625,7 +877,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-botuverá-912692917-034",
+        "id": "rua-botuverá-912692917-048",
         "street": "Rua Botuverá",
         "highway": "secondary",
         "osm_way_id": 912692917
@@ -633,7 +885,43 @@
     },
     {
       "type": "Feature",
-      "id": "rua-calopsita-399701557-035",
+      "id": "rua-botuverá-912692916-049",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.958950750421444,
+          -27.14391724472562
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-botuverá-912692916-049",
+        "street": "Rua Botuverá",
+        "highway": "secondary",
+        "osm_way_id": 912692916
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-botuverá-545829428-050",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.95977335,
+          -27.14394865
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-botuverá-545829428-050",
+        "street": "Rua Botuverá",
+        "highway": "secondary",
+        "osm_way_id": 545829428
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-calopsita-399701557-051",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -643,7 +931,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-calopsita-399701557-035",
+        "id": "rua-calopsita-399701557-051",
         "street": "Rua Calopsita",
         "highway": "residential",
         "osm_way_id": 399701557
@@ -651,7 +939,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-carlos-hort-314601371-036",
+      "id": "rua-carlos-hort-314601371-052",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -661,7 +949,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-carlos-hort-314601371-036",
+        "id": "rua-carlos-hort-314601371-052",
         "street": "Rua Carlos Hort",
         "highway": "residential",
         "osm_way_id": 314601371
@@ -669,7 +957,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-carlos-knopp-314601372-037",
+      "id": "rua-carlos-knopp-314601372-053",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -679,7 +967,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-carlos-knopp-314601372-037",
+        "id": "rua-carlos-knopp-314601372-053",
         "street": "Rua Carlos Knopp",
         "highway": "residential",
         "osm_way_id": 314601372
@@ -687,7 +975,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-curió-399701563-038",
+      "id": "rua-curió-399701563-054",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -697,7 +985,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-curió-399701563-038",
+        "id": "rua-curió-399701563-054",
         "street": "Rua Curió",
         "highway": "residential",
         "osm_way_id": 399701563
@@ -705,7 +993,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-dj-025-314601373-039",
+      "id": "rua-dj-025-314601373-055",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -715,7 +1003,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-dj-025-314601373-039",
+        "id": "rua-dj-025-314601373-055",
         "street": "Rua DJ-025",
         "highway": "residential",
         "osm_way_id": 314601373
@@ -723,7 +1011,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-dj-025-314601373-040",
+      "id": "rua-dj-025-314601373-056",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -733,7 +1021,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-dj-025-314601373-040",
+        "id": "rua-dj-025-314601373-056",
         "street": "Rua DJ-025",
         "highway": "residential",
         "osm_way_id": 314601373
@@ -741,7 +1029,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-dj-032-575325416-041",
+      "id": "rua-dj-032-575325416-057",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -751,7 +1039,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-dj-032-575325416-041",
+        "id": "rua-dj-032-575325416-057",
         "street": "Rua DJ-032",
         "highway": "residential",
         "osm_way_id": 575325416
@@ -759,7 +1047,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-dj-033-384863531-042",
+      "id": "rua-dj-033-384863531-058",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -769,7 +1057,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-dj-033-384863531-042",
+        "id": "rua-dj-033-384863531-058",
         "street": "Rua DJ-033",
         "highway": "residential",
         "osm_way_id": 384863531
@@ -777,7 +1065,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-dj-034-314601370-043",
+      "id": "rua-dj-034-314601370-059",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -787,7 +1075,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-dj-034-314601370-043",
+        "id": "rua-dj-034-314601370-059",
         "street": "Rua DJ-034",
         "highway": "residential",
         "osm_way_id": 314601370
@@ -795,7 +1083,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-dj-045-314601378-044",
+      "id": "rua-dj-045-314601378-060",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -805,7 +1093,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-dj-045-314601378-044",
+        "id": "rua-dj-045-314601378-060",
         "street": "Rua DJ-045",
         "highway": "residential",
         "osm_way_id": 314601378
@@ -813,7 +1101,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-dj-050-314601380-045",
+      "id": "rua-dj-050-314601380-061",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -823,7 +1111,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-dj-050-314601380-045",
+        "id": "rua-dj-050-314601380-061",
         "street": "Rua DJ-050",
         "highway": "residential",
         "osm_way_id": 314601380
@@ -831,7 +1119,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-dj-050-314601380-046",
+      "id": "rua-dj-050-314601380-062",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -841,7 +1129,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-dj-050-314601380-046",
+        "id": "rua-dj-050-314601380-062",
         "street": "Rua DJ-050",
         "highway": "residential",
         "osm_way_id": 314601380
@@ -849,7 +1137,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-eberhardt-hort-314601381-047",
+      "id": "rua-eberhardt-hort-314601381-063",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -859,7 +1147,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-eberhardt-hort-314601381-047",
+        "id": "rua-eberhardt-hort-314601381-063",
         "street": "Rua Eberhardt Hort",
         "highway": "residential",
         "osm_way_id": 314601381
@@ -867,7 +1155,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-edmundo-petermann-399701570-048",
+      "id": "rua-edmundo-petermann-399701570-064",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -877,7 +1165,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-edmundo-petermann-399701570-048",
+        "id": "rua-edmundo-petermann-399701570-064",
         "street": "Rua Edmundo Petermann",
         "highway": "residential",
         "osm_way_id": 399701570
@@ -885,7 +1173,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-edmundo-petermann-399701570-049",
+      "id": "rua-edmundo-petermann-399701570-065",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -895,7 +1183,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-edmundo-petermann-399701570-049",
+        "id": "rua-edmundo-petermann-399701570-065",
         "street": "Rua Edmundo Petermann",
         "highway": "residential",
         "osm_way_id": 399701570
@@ -903,7 +1191,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-elisabeth-scharf-groh-399701538-050",
+      "id": "rua-elisabeth-scharf-groh-399701538-066",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -913,7 +1201,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-elisabeth-scharf-groh-399701538-050",
+        "id": "rua-elisabeth-scharf-groh-399701538-066",
         "street": "Rua Elisabeth Scharf Groh",
         "highway": "residential",
         "osm_way_id": 399701538
@@ -921,7 +1209,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-elisabeth-scharf-groh-399701538-051",
+      "id": "rua-elisabeth-scharf-groh-399701538-067",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -931,7 +1219,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-elisabeth-scharf-groh-399701538-051",
+        "id": "rua-elisabeth-scharf-groh-399701538-067",
         "street": "Rua Elisabeth Scharf Groh",
         "highway": "residential",
         "osm_way_id": 399701538
@@ -939,7 +1227,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-elmo-horst-399701556-052",
+      "id": "rua-elmo-horst-399701556-068",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -949,7 +1237,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-elmo-horst-399701556-052",
+        "id": "rua-elmo-horst-399701556-068",
         "street": "Rua Elmo Horst",
         "highway": "residential",
         "osm_way_id": 399701556
@@ -957,7 +1245,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-elmo-horst-399701556-053",
+      "id": "rua-elmo-horst-399701556-069",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -967,7 +1255,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-elmo-horst-399701556-053",
+        "id": "rua-elmo-horst-399701556-069",
         "street": "Rua Elmo Horst",
         "highway": "residential",
         "osm_way_id": 399701556
@@ -975,7 +1263,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-ernesto-bianchini-575169149-054",
+      "id": "rua-ernesto-bianchini-575169149-070",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -985,7 +1273,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-ernesto-bianchini-575169149-054",
+        "id": "rua-ernesto-bianchini-575169149-070",
         "street": "Rua Ernesto Bianchini",
         "highway": "tertiary",
         "osm_way_id": 575169149
@@ -993,17 +1281,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-ernesto-bianchini-575169149-055",
+      "id": "rua-ernesto-bianchini-575169149-071",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.970039774858385,
-          -27.137640712285833
+          -48.97218228866317,
+          -27.142684037007857
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-ernesto-bianchini-575169149-055",
+        "id": "rua-ernesto-bianchini-575169149-071",
         "street": "Rua Ernesto Bianchini",
         "highway": "tertiary",
         "osm_way_id": 575169149
@@ -1011,17 +1299,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-ernesto-bianchini-575169149-056",
+      "id": "rua-ernesto-bianchini-575169149-072",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.964367176638056,
-          -27.129485797230455
+          -48.97074725074421,
+          -27.13886457307198
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-ernesto-bianchini-575169149-056",
+        "id": "rua-ernesto-bianchini-575169149-072",
         "street": "Rua Ernesto Bianchini",
         "highway": "tertiary",
         "osm_way_id": 575169149
@@ -1029,7 +1317,79 @@
     },
     {
       "type": "Feature",
-      "id": "rua-ernesto-bianchini-575169149-057",
+      "id": "rua-ernesto-bianchini-575169149-073",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.968052898585334,
+          -27.13563845737708
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-ernesto-bianchini-575169149-073",
+        "street": "Rua Ernesto Bianchini",
+        "highway": "tertiary",
+        "osm_way_id": 575169149
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-ernesto-bianchini-575169149-074",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.9664335914724,
+          -27.131639784957084
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-ernesto-bianchini-575169149-074",
+        "street": "Rua Ernesto Bianchini",
+        "highway": "tertiary",
+        "osm_way_id": 575169149
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-ernesto-bianchini-575169149-075",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.96336820914722,
+          -27.128369700807138
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-ernesto-bianchini-575169149-075",
+        "street": "Rua Ernesto Bianchini",
+        "highway": "tertiary",
+        "osm_way_id": 575169149
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-ernesto-bianchini-575169149-076",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.95931711438899,
+          -27.128316358962035
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-ernesto-bianchini-575169149-076",
+        "street": "Rua Ernesto Bianchini",
+        "highway": "tertiary",
+        "osm_way_id": 575169149
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-ernesto-bianchini-575169149-077",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1039,7 +1399,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-ernesto-bianchini-575169149-057",
+        "id": "rua-ernesto-bianchini-575169149-077",
         "street": "Rua Ernesto Bianchini",
         "highway": "tertiary",
         "osm_way_id": 575169149
@@ -1047,7 +1407,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-ervim-hodecker-399709300-058",
+      "id": "rua-ervim-hodecker-399709300-078",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1057,7 +1417,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-ervim-hodecker-399709300-058",
+        "id": "rua-ervim-hodecker-399709300-078",
         "street": "Rua Ervim Hodecker",
         "highway": "residential",
         "osm_way_id": 399709300
@@ -1065,7 +1425,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-faizão-399701546-059",
+      "id": "rua-faizão-399701546-079",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1075,7 +1435,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-faizão-399701546-059",
+        "id": "rua-faizão-399701546-079",
         "street": "Rua Faizão",
         "highway": "residential",
         "osm_way_id": 399701546
@@ -1083,7 +1443,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-francisco-feliciano-da-silva-399701535-060",
+      "id": "rua-francisco-feliciano-da-silva-399701535-080",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1093,7 +1453,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-francisco-feliciano-da-silva-399701535-060",
+        "id": "rua-francisco-feliciano-da-silva-399701535-080",
         "street": "Rua Francisco Feliciano da Silva",
         "highway": "residential",
         "osm_way_id": 399701535
@@ -1101,7 +1461,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-francisco-haag-575169141-061",
+      "id": "rua-francisco-haag-575169141-081",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1111,7 +1471,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-francisco-haag-575169141-061",
+        "id": "rua-francisco-haag-575169141-081",
         "street": "Rua Francisco Haag",
         "highway": "residential",
         "osm_way_id": 575169141
@@ -1119,7 +1479,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-francisco-haag-575169141-062",
+      "id": "rua-francisco-haag-575169141-082",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1129,7 +1489,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-francisco-haag-575169141-062",
+        "id": "rua-francisco-haag-575169141-082",
         "street": "Rua Francisco Haag",
         "highway": "residential",
         "osm_way_id": 575169141
@@ -1137,7 +1497,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-germano-hort-575278916-063",
+      "id": "rua-germano-hort-575278916-083",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1147,7 +1507,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-germano-hort-575278916-063",
+        "id": "rua-germano-hort-575278916-083",
         "street": "Rua Germano Hort",
         "highway": "residential",
         "osm_way_id": 575278916
@@ -1155,7 +1515,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-germano-petermann-575169143-064",
+      "id": "rua-germano-petermann-575169143-084",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1165,7 +1525,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-germano-petermann-575169143-064",
+        "id": "rua-germano-petermann-575169143-084",
         "street": "Rua Germano Petermann",
         "highway": "residential",
         "osm_way_id": 575169143
@@ -1173,7 +1533,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-germano-schmitt-399701566-065",
+      "id": "rua-germano-schmitt-399701566-085",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1183,7 +1543,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-germano-schmitt-399701566-065",
+        "id": "rua-germano-schmitt-399701566-085",
         "street": "Rua Germano Schmitt",
         "highway": "residential",
         "osm_way_id": 399701566
@@ -1191,7 +1551,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-gilberto-hassmann-575160730-066",
+      "id": "rua-gilberto-hassmann-575160730-086",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1201,7 +1561,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-gilberto-hassmann-575160730-066",
+        "id": "rua-gilberto-hassmann-575160730-086",
         "street": "Rua Gilberto Hassmann",
         "highway": "residential",
         "osm_way_id": 575160730
@@ -1209,7 +1569,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-gilberto-hassmann-732483911-067",
+      "id": "rua-gilberto-hassmann-732483911-087",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1219,7 +1579,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-gilberto-hassmann-732483911-067",
+        "id": "rua-gilberto-hassmann-732483911-087",
         "street": "Rua Gilberto Hassmann",
         "highway": "residential",
         "osm_way_id": 732483911
@@ -1227,7 +1587,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-guilherme-alberto-frederico-hoeffelmann-399701525-068",
+      "id": "rua-guilherme-alberto-frederico-hoeffelmann-399701525-088",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1237,7 +1597,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-guilherme-alberto-frederico-hoeffelmann-399701525-068",
+        "id": "rua-guilherme-alberto-frederico-hoeffelmann-399701525-088",
         "street": "Rua Guilherme Alberto Frederico Hoeffelmann",
         "highway": "residential",
         "osm_way_id": 399701525
@@ -1245,7 +1605,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-henrique-gohr-399701543-069",
+      "id": "rua-henrique-gohr-399701543-089",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1255,7 +1615,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-henrique-gohr-399701543-069",
+        "id": "rua-henrique-gohr-399701543-089",
         "street": "Rua Henrique Gohr",
         "highway": "residential",
         "osm_way_id": 399701543
@@ -1263,7 +1623,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-henrique-gohr-399701543-070",
+      "id": "rua-henrique-gohr-399701543-090",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1273,7 +1633,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-henrique-gohr-399701543-070",
+        "id": "rua-henrique-gohr-399701543-090",
         "street": "Rua Henrique Gohr",
         "highway": "residential",
         "osm_way_id": 399701543
@@ -1281,7 +1641,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-irineo-schwartz-575160726-071",
+      "id": "rua-irineo-schwartz-575160726-091",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1291,7 +1651,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-irineo-schwartz-575160726-071",
+        "id": "rua-irineo-schwartz-575160726-091",
         "street": "Rua Irineo Schwartz",
         "highway": "residential",
         "osm_way_id": 575160726
@@ -1299,7 +1659,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-irmã-josefina-314601399-072",
+      "id": "rua-irmã-josefina-314601399-092",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1309,7 +1669,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-irmã-josefina-314601399-072",
+        "id": "rua-irmã-josefina-314601399-092",
         "street": "Rua Irmã Josefina",
         "highway": "residential",
         "osm_way_id": 314601399
@@ -1317,7 +1677,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-irmã-josefina-314601399-073",
+      "id": "rua-irmã-josefina-314601399-093",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1327,7 +1687,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-irmã-josefina-314601399-073",
+        "id": "rua-irmã-josefina-314601399-093",
         "street": "Rua Irmã Josefina",
         "highway": "residential",
         "osm_way_id": 314601399
@@ -1335,7 +1695,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-irmã-josefina-314601402-074",
+      "id": "rua-irmã-josefina-314601402-094",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1345,7 +1705,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-irmã-josefina-314601402-074",
+        "id": "rua-irmã-josefina-314601402-094",
         "street": "Rua Irmã Josefina",
         "highway": "residential",
         "osm_way_id": 314601402
@@ -1353,7 +1713,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-irmã-josefina-503298663-075",
+      "id": "rua-irmã-josefina-503298663-095",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1363,7 +1723,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-irmã-josefina-503298663-075",
+        "id": "rua-irmã-josefina-503298663-095",
         "street": "Rua Irmã Josefina",
         "highway": "residential",
         "osm_way_id": 503298663
@@ -1371,7 +1731,25 @@
     },
     {
       "type": "Feature",
-      "id": "rua-jm-014-572075713-076",
+      "id": "rua-irmã-josefina-503298661-096",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.956132600000004,
+          -27.14007805
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-irmã-josefina-503298661-096",
+        "street": "Rua Irmã Josefina",
+        "highway": "residential",
+        "osm_way_id": 503298661
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-jm-014-572075713-097",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1381,7 +1759,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-jm-014-572075713-076",
+        "id": "rua-jm-014-572075713-097",
         "street": "Rua JM-014",
         "highway": "residential",
         "osm_way_id": 572075713
@@ -1389,7 +1767,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-jm-014-572075713-077",
+      "id": "rua-jm-014-572075713-098",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1399,7 +1777,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-jm-014-572075713-077",
+        "id": "rua-jm-014-572075713-098",
         "street": "Rua JM-014",
         "highway": "residential",
         "osm_way_id": 572075713
@@ -1407,7 +1785,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joaquim-cesari-314601377-078",
+      "id": "rua-joaquim-cesari-314601377-099",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1417,7 +1795,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joaquim-cesari-314601377-078",
+        "id": "rua-joaquim-cesari-314601377-099",
         "street": "Rua Joaquim Cesari",
         "highway": "residential",
         "osm_way_id": 314601377
@@ -1425,7 +1803,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-josé-salézio-waldrich-399701541-079",
+      "id": "rua-josé-salézio-waldrich-399701541-100",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1435,7 +1813,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-josé-salézio-waldrich-399701541-079",
+        "id": "rua-josé-salézio-waldrich-399701541-100",
         "street": "Rua José Salézio Waldrich",
         "highway": "residential",
         "osm_way_id": 399701541
@@ -1443,7 +1821,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-josé-de-lemos-732483909-080",
+      "id": "rua-josé-de-lemos-732483909-101",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1453,7 +1831,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-josé-de-lemos-732483909-080",
+        "id": "rua-josé-de-lemos-732483909-101",
         "street": "Rua José de Lemos",
         "highway": "residential",
         "osm_way_id": 732483909
@@ -1461,7 +1839,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-josé-de-lemos-732483910-081",
+      "id": "rua-josé-de-lemos-732483910-102",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1471,7 +1849,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-josé-de-lemos-732483910-081",
+        "id": "rua-josé-de-lemos-732483910-102",
         "street": "Rua José de Lemos",
         "highway": "residential",
         "osm_way_id": 732483910
@@ -1479,7 +1857,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-josé-de-lemos-575160727-082",
+      "id": "rua-josé-de-lemos-575160727-103",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1489,7 +1867,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-josé-de-lemos-575160727-082",
+        "id": "rua-josé-de-lemos-575160727-103",
         "street": "Rua José de Lemos",
         "highway": "residential",
         "osm_way_id": 575160727
@@ -1497,7 +1875,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joão-adão-groh-399701529-083",
+      "id": "rua-joão-adão-groh-399701529-104",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1507,7 +1885,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joão-adão-groh-399701529-083",
+        "id": "rua-joão-adão-groh-399701529-104",
         "street": "Rua João Adão Groh",
         "highway": "residential",
         "osm_way_id": 399701529
@@ -1515,7 +1893,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joão-bianchini-367246589-084",
+      "id": "rua-joão-bianchini-367246589-105",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1525,7 +1903,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joão-bianchini-367246589-084",
+        "id": "rua-joão-bianchini-367246589-105",
         "street": "Rua João Bianchini",
         "highway": "tertiary",
         "osm_way_id": 367246589
@@ -1533,7 +1911,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joão-bianchini-367246589-085",
+      "id": "rua-joão-bianchini-367246589-106",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1543,7 +1921,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joão-bianchini-367246589-085",
+        "id": "rua-joão-bianchini-367246589-106",
         "street": "Rua João Bianchini",
         "highway": "tertiary",
         "osm_way_id": 367246589
@@ -1551,7 +1929,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joão-bianchini-531501649-086",
+      "id": "rua-joão-bianchini-531501649-107",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1561,7 +1939,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joão-bianchini-531501649-086",
+        "id": "rua-joão-bianchini-531501649-107",
         "street": "Rua João Bianchini",
         "highway": "tertiary",
         "osm_way_id": 531501649
@@ -1569,7 +1947,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joão-bianchini-367246586-087",
+      "id": "rua-joão-bianchini-367246586-108",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1579,7 +1957,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joão-bianchini-367246586-087",
+        "id": "rua-joão-bianchini-367246586-108",
         "street": "Rua João Bianchini",
         "highway": "tertiary",
         "osm_way_id": 367246586
@@ -1587,7 +1965,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joão-genézio-goedert-399701540-088",
+      "id": "rua-joão-genézio-goedert-399701540-109",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1597,7 +1975,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joão-genézio-goedert-399701540-088",
+        "id": "rua-joão-genézio-goedert-399701540-109",
         "street": "Rua João Genézio Goedert",
         "highway": "residential",
         "osm_way_id": 399701540
@@ -1605,7 +1983,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joão-peters-314601396-089",
+      "id": "rua-joão-peters-314601396-110",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1615,7 +1993,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joão-peters-314601396-089",
+        "id": "rua-joão-peters-314601396-110",
         "street": "Rua João Peters",
         "highway": "residential",
         "osm_way_id": 314601396
@@ -1623,7 +2001,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joão-peters-314601396-090",
+      "id": "rua-joão-peters-314601396-111",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1633,7 +2011,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joão-peters-314601396-090",
+        "id": "rua-joão-peters-314601396-111",
         "street": "Rua João Peters",
         "highway": "residential",
         "osm_way_id": 314601396
@@ -1641,7 +2019,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-joão-peters-314601396-091",
+      "id": "rua-joão-peters-314601396-112",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1651,7 +2029,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-joão-peters-314601396-091",
+        "id": "rua-joão-peters-314601396-112",
         "street": "Rua João Peters",
         "highway": "residential",
         "osm_way_id": 314601396
@@ -1659,7 +2037,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-leandro-zanca-503298662-092",
+      "id": "rua-leandro-zanca-503298662-113",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1669,7 +2047,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-leandro-zanca-503298662-092",
+        "id": "rua-leandro-zanca-503298662-113",
         "street": "Rua Leandro Zanca",
         "highway": "residential",
         "osm_way_id": 503298662
@@ -1677,7 +2055,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-leonardo-augusto-moreira-bergamasco-575278923-093",
+      "id": "rua-leonardo-augusto-moreira-bergamasco-575278923-114",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1687,7 +2065,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-leonardo-augusto-moreira-bergamasco-575278923-093",
+        "id": "rua-leonardo-augusto-moreira-bergamasco-575278923-114",
         "street": "Rua Leonardo Augusto Moreira Bergamasco",
         "highway": "residential",
         "osm_way_id": 575278923
@@ -1695,7 +2073,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-leonardo-pedro-voss-399701534-094",
+      "id": "rua-leonardo-pedro-voss-399701534-115",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1705,7 +2083,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-leonardo-pedro-voss-399701534-094",
+        "id": "rua-leonardo-pedro-voss-399701534-115",
         "street": "Rua Leonardo Pedro Voss",
         "highway": "residential",
         "osm_way_id": 399701534
@@ -1713,7 +2091,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-leônidas-padilha-de-oliveira-314601406-095",
+      "id": "rua-leônidas-padilha-de-oliveira-314601406-116",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1723,7 +2101,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-leônidas-padilha-de-oliveira-314601406-095",
+        "id": "rua-leônidas-padilha-de-oliveira-314601406-116",
         "street": "Rua Leônidas Padilha de Oliveira",
         "highway": "residential",
         "osm_way_id": 314601406
@@ -1731,7 +2109,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-leônidas-padilha-de-oliveira-314601406-096",
+      "id": "rua-leônidas-padilha-de-oliveira-314601406-117",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1741,7 +2119,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-leônidas-padilha-de-oliveira-314601406-096",
+        "id": "rua-leônidas-padilha-de-oliveira-314601406-117",
         "street": "Rua Leônidas Padilha de Oliveira",
         "highway": "residential",
         "osm_way_id": 314601406
@@ -1749,7 +2127,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-leônidas-padilha-de-oliveira-314601405-097",
+      "id": "rua-leônidas-padilha-de-oliveira-314601405-118",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1759,7 +2137,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-leônidas-padilha-de-oliveira-314601405-097",
+        "id": "rua-leônidas-padilha-de-oliveira-314601405-118",
         "street": "Rua Leônidas Padilha de Oliveira",
         "highway": "residential",
         "osm_way_id": 314601405
@@ -1767,7 +2145,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-loduvico-mérico-35894637-098",
+      "id": "rua-loduvico-mérico-35894637-119",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1777,7 +2155,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-loduvico-mérico-35894637-098",
+        "id": "rua-loduvico-mérico-35894637-119",
         "street": "Rua Loduvico Mérico",
         "highway": "tertiary",
         "osm_way_id": 35894637
@@ -1785,7 +2163,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-loduvico-mérico-35894637-099",
+      "id": "rua-loduvico-mérico-35894637-120",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1795,7 +2173,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-loduvico-mérico-35894637-099",
+        "id": "rua-loduvico-mérico-35894637-120",
         "street": "Rua Loduvico Mérico",
         "highway": "tertiary",
         "osm_way_id": 35894637
@@ -1803,7 +2181,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-loduvico-mérico-912692919-100",
+      "id": "rua-loduvico-mérico-912692919-121",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1813,7 +2191,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-loduvico-mérico-912692919-100",
+        "id": "rua-loduvico-mérico-912692919-121",
         "street": "Rua Loduvico Mérico",
         "highway": "tertiary",
         "osm_way_id": 912692919
@@ -1821,7 +2199,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-loduvico-mérico-912692918-101",
+      "id": "rua-loduvico-mérico-912692918-122",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1831,7 +2209,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-loduvico-mérico-912692918-101",
+        "id": "rua-loduvico-mérico-912692918-122",
         "street": "Rua Loduvico Mérico",
         "highway": "tertiary",
         "osm_way_id": 912692918
@@ -1839,7 +2217,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-luiz-cesário-503298666-102",
+      "id": "rua-luiz-cesário-503298666-123",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1849,7 +2227,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-luiz-cesário-503298666-102",
+        "id": "rua-luiz-cesário-503298666-123",
         "street": "Rua Luiz Cesário",
         "highway": "residential",
         "osm_way_id": 503298666
@@ -1857,7 +2235,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-luiz-cesário-575325418-103",
+      "id": "rua-luiz-cesário-575325418-124",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1867,7 +2245,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-luiz-cesário-575325418-103",
+        "id": "rua-luiz-cesário-575325418-124",
         "street": "Rua Luiz Cesário",
         "highway": "residential",
         "osm_way_id": 575325418
@@ -1875,7 +2253,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-luiz-morelli-310248812-104",
+      "id": "rua-luiz-morelli-310248812-125",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1885,7 +2263,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-luiz-morelli-310248812-104",
+        "id": "rua-luiz-morelli-310248812-125",
         "street": "Rua Luiz Morelli",
         "highway": "tertiary",
         "osm_way_id": 310248812
@@ -1893,17 +2271,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-luiz-morelli-310248812-105",
+      "id": "rua-luiz-morelli-310248812-126",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.9622522184048,
-          -27.14932871381905
+          -48.96183372318213,
+          -27.14812074489845
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-luiz-morelli-310248812-105",
+        "id": "rua-luiz-morelli-310248812-126",
         "street": "Rua Luiz Morelli",
         "highway": "tertiary",
         "osm_way_id": 310248812
@@ -1911,17 +2289,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-luiz-morelli-310248812-106",
+      "id": "rua-luiz-morelli-310248812-127",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.95940874049523,
-          -27.1538095609467
+          -48.96085226112751,
+          -27.151542628724172
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-luiz-morelli-310248812-106",
+        "id": "rua-luiz-morelli-310248812-127",
         "street": "Rua Luiz Morelli",
         "highway": "tertiary",
         "osm_way_id": 310248812
@@ -1929,7 +2307,25 @@
     },
     {
       "type": "Feature",
-      "id": "rua-luiz-morelli-310248812-107",
+      "id": "rua-luiz-morelli-310248812-128",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.95865718708233,
+          -27.15491914506769
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-luiz-morelli-310248812-128",
+        "street": "Rua Luiz Morelli",
+        "highway": "tertiary",
+        "osm_way_id": 310248812
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-luiz-morelli-310248812-129",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1939,7 +2335,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-luiz-morelli-310248812-107",
+        "id": "rua-luiz-morelli-310248812-129",
         "street": "Rua Luiz Morelli",
         "highway": "tertiary",
         "osm_way_id": 310248812
@@ -1947,7 +2343,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-luiz-pedrini-370371843-108",
+      "id": "rua-luiz-pedrini-370371843-130",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1957,7 +2353,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-luiz-pedrini-370371843-108",
+        "id": "rua-luiz-pedrini-370371843-130",
         "street": "Rua Luiz Pedrini",
         "highway": "residential",
         "osm_way_id": 370371843
@@ -1965,7 +2361,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-luiz-pedrini-370371843-109",
+      "id": "rua-luiz-pedrini-370371843-131",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1975,7 +2371,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-luiz-pedrini-370371843-109",
+        "id": "rua-luiz-pedrini-370371843-131",
         "street": "Rua Luiz Pedrini",
         "highway": "residential",
         "osm_way_id": 370371843
@@ -1983,7 +2379,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-madre-chantal-314601397-110",
+      "id": "rua-madre-chantal-314601397-132",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1993,7 +2389,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-madre-chantal-314601397-110",
+        "id": "rua-madre-chantal-314601397-132",
         "street": "Rua Madre Chantal",
         "highway": "residential",
         "osm_way_id": 314601397
@@ -2001,7 +2397,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-manoel-josé-da-cunha-399701542-111",
+      "id": "rua-manoel-josé-da-cunha-399701542-133",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2011,7 +2407,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-manoel-josé-da-cunha-399701542-111",
+        "id": "rua-manoel-josé-da-cunha-399701542-133",
         "street": "Rua Manoel José da Cunha",
         "highway": "residential",
         "osm_way_id": 399701542
@@ -2019,7 +2415,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-maria-andré-de-freitas-399701554-112",
+      "id": "rua-maria-andré-de-freitas-399701554-134",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2029,7 +2425,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-maria-andré-de-freitas-399701554-112",
+        "id": "rua-maria-andré-de-freitas-399701554-134",
         "street": "Rua Maria André de Freitas",
         "highway": "residential",
         "osm_way_id": 399701554
@@ -2037,7 +2433,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-maria-andré-de-freitas-399701554-113",
+      "id": "rua-maria-andré-de-freitas-399701554-135",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2047,7 +2443,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-maria-andré-de-freitas-399701554-113",
+        "id": "rua-maria-andré-de-freitas-399701554-135",
         "street": "Rua Maria André de Freitas",
         "highway": "residential",
         "osm_way_id": 399701554
@@ -2055,7 +2451,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-maria-andré-de-freitas-399701554-114",
+      "id": "rua-maria-andré-de-freitas-399701554-136",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2065,7 +2461,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-maria-andré-de-freitas-399701554-114",
+        "id": "rua-maria-andré-de-freitas-399701554-136",
         "street": "Rua Maria André de Freitas",
         "highway": "residential",
         "osm_way_id": 399701554
@@ -2073,7 +2469,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-maria-nicolodi-perassa-575278924-115",
+      "id": "rua-maria-nicolodi-perassa-575278924-137",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2083,7 +2479,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-maria-nicolodi-perassa-575278924-115",
+        "id": "rua-maria-nicolodi-perassa-575278924-137",
         "street": "Rua Maria Nicolodi Perassa",
         "highway": "residential",
         "osm_way_id": 575278924
@@ -2091,7 +2487,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-maria-tamázia-silva-572720010-116",
+      "id": "rua-maria-tamázia-silva-572720010-138",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2101,7 +2497,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-maria-tamázia-silva-572720010-116",
+        "id": "rua-maria-tamázia-silva-572720010-138",
         "street": "Rua Maria Tamázia Silva",
         "highway": "residential",
         "osm_way_id": 572720010
@@ -2109,7 +2505,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-melchior-kohler-399701519-117",
+      "id": "rua-melchior-kohler-399701519-139",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2119,7 +2515,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-melchior-kohler-399701519-117",
+        "id": "rua-melchior-kohler-399701519-139",
         "street": "Rua Melchior Kohler",
         "highway": "residential",
         "osm_way_id": 399701519
@@ -2127,7 +2523,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-márcio-haas-399701567-118",
+      "id": "rua-márcio-haas-399701567-140",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2137,7 +2533,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-márcio-haas-399701567-118",
+        "id": "rua-márcio-haas-399701567-140",
         "street": "Rua Márcio Haas",
         "highway": "residential",
         "osm_way_id": 399701567
@@ -2145,7 +2541,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-mário-hochsprung-314601376-119",
+      "id": "rua-mário-hochsprung-314601376-141",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2155,7 +2551,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-mário-hochsprung-314601376-119",
+        "id": "rua-mário-hochsprung-314601376-141",
         "street": "Rua Mário Hochsprung",
         "highway": "residential",
         "osm_way_id": 314601376
@@ -2163,7 +2559,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-orlando-da-silva-399701569-120",
+      "id": "rua-orlando-da-silva-399701569-142",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2173,7 +2569,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-orlando-da-silva-399701569-120",
+        "id": "rua-orlando-da-silva-399701569-142",
         "street": "Rua Orlando da Silva",
         "highway": "residential",
         "osm_way_id": 399701569
@@ -2181,7 +2577,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-orlando-da-silva-399701569-121",
+      "id": "rua-orlando-da-silva-399701569-143",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2191,7 +2587,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-orlando-da-silva-399701569-121",
+        "id": "rua-orlando-da-silva-399701569-143",
         "street": "Rua Orlando da Silva",
         "highway": "residential",
         "osm_way_id": 399701569
@@ -2199,7 +2595,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-oswaldo-becker-314601404-122",
+      "id": "rua-oswaldo-becker-314601404-144",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2209,7 +2605,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-oswaldo-becker-314601404-122",
+        "id": "rua-oswaldo-becker-314601404-144",
         "street": "Rua Oswaldo Becker",
         "highway": "residential",
         "osm_way_id": 314601404
@@ -2217,7 +2613,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-oswaldo-becker-912710531-123",
+      "id": "rua-oswaldo-becker-912710531-145",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2227,7 +2623,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-oswaldo-becker-912710531-123",
+        "id": "rua-oswaldo-becker-912710531-145",
         "street": "Rua Oswaldo Becker",
         "highway": "residential",
         "osm_way_id": 912710531
@@ -2235,7 +2631,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-padre-carlos-rogério-groh-399701522-124",
+      "id": "rua-padre-carlos-rogério-groh-399701522-146",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2245,7 +2641,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-padre-carlos-rogério-groh-399701522-124",
+        "id": "rua-padre-carlos-rogério-groh-399701522-146",
         "street": "Rua Padre Carlos Rogério Groh",
         "highway": "residential",
         "osm_way_id": 399701522
@@ -2253,7 +2649,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-padre-vicente-schmitz-314601398-125",
+      "id": "rua-padre-vicente-schmitz-314601398-147",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2263,7 +2659,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-padre-vicente-schmitz-314601398-125",
+        "id": "rua-padre-vicente-schmitz-314601398-147",
         "street": "Rua Padre Vicente Schmitz",
         "highway": "residential",
         "osm_way_id": 314601398
@@ -2271,7 +2667,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-paulo-voss-575169139-126",
+      "id": "rua-paulo-voss-575169139-148",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2281,7 +2677,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-paulo-voss-575169139-126",
+        "id": "rua-paulo-voss-575169139-148",
         "street": "Rua Paulo Voss",
         "highway": "residential",
         "osm_way_id": 575169139
@@ -2289,7 +2685,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-pavão-399701559-127",
+      "id": "rua-pavão-399701559-149",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2299,7 +2695,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-pavão-399701559-127",
+        "id": "rua-pavão-399701559-149",
         "street": "Rua Pavão",
         "highway": "residential",
         "osm_way_id": 399701559
@@ -2307,7 +2703,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-pavão-728919212-128",
+      "id": "rua-pavão-728919212-150",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2317,7 +2713,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-pavão-728919212-128",
+        "id": "rua-pavão-728919212-150",
         "street": "Rua Pavão",
         "highway": "residential",
         "osm_way_id": 728919212
@@ -2325,7 +2721,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-pedro-schweinberger-314601384-129",
+      "id": "rua-pedro-schweinberger-314601384-151",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2335,7 +2731,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-pedro-schweinberger-314601384-129",
+        "id": "rua-pedro-schweinberger-314601384-151",
         "street": "Rua Pedro Schweinberger",
         "highway": "residential",
         "osm_way_id": 314601384
@@ -2343,7 +2739,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-pedro-voss-575169138-130",
+      "id": "rua-pedro-voss-575169138-152",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2353,7 +2749,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-pedro-voss-575169138-130",
+        "id": "rua-pedro-voss-575169138-152",
         "street": "Rua Pedro Voss",
         "highway": "residential",
         "osm_way_id": 575169138
@@ -2361,7 +2757,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-001-399701580-131",
+      "id": "rua-rb-001-399701580-153",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2371,7 +2767,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-001-399701580-131",
+        "id": "rua-rb-001-399701580-153",
         "street": "Rua RB-001",
         "highway": "residential",
         "osm_way_id": 399701580
@@ -2379,7 +2775,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-001-399701580-132",
+      "id": "rua-rb-001-399701580-154",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2389,7 +2785,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-001-399701580-132",
+        "id": "rua-rb-001-399701580-154",
         "street": "Rua RB-001",
         "highway": "residential",
         "osm_way_id": 399701580
@@ -2397,7 +2793,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-002-399701518-133",
+      "id": "rua-rb-002-399701518-155",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2407,7 +2803,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-002-399701518-133",
+        "id": "rua-rb-002-399701518-155",
         "street": "Rua RB-002",
         "highway": "residential",
         "osm_way_id": 399701518
@@ -2415,7 +2811,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-003-399701520-134",
+      "id": "rua-rb-003-399701520-156",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2425,7 +2821,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-003-399701520-134",
+        "id": "rua-rb-003-399701520-156",
         "street": "Rua RB-003",
         "highway": "residential",
         "osm_way_id": 399701520
@@ -2433,7 +2829,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-004-399701521-135",
+      "id": "rua-rb-004-399701521-157",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2443,7 +2839,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-004-399701521-135",
+        "id": "rua-rb-004-399701521-157",
         "street": "Rua RB-004",
         "highway": "residential",
         "osm_way_id": 399701521
@@ -2451,7 +2847,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-005-575160736-136",
+      "id": "rua-rb-005-575160736-158",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2461,7 +2857,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-005-575160736-136",
+        "id": "rua-rb-005-575160736-158",
         "street": "Rua RB-005",
         "highway": "residential",
         "osm_way_id": 575160736
@@ -2469,7 +2865,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-006-575160738-137",
+      "id": "rua-rb-006-575160738-159",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2479,7 +2875,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-006-575160738-137",
+        "id": "rua-rb-006-575160738-159",
         "street": "Rua RB-006",
         "highway": "residential",
         "osm_way_id": 575160738
@@ -2487,7 +2883,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-007-399701528-138",
+      "id": "rua-rb-007-399701528-160",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2497,7 +2893,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-007-399701528-138",
+        "id": "rua-rb-007-399701528-160",
         "street": "Rua RB-007",
         "highway": "residential",
         "osm_way_id": 399701528
@@ -2505,7 +2901,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-009-399701533-139",
+      "id": "rua-rb-009-399701533-161",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2515,7 +2911,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-009-399701533-139",
+        "id": "rua-rb-009-399701533-161",
         "street": "Rua RB-009",
         "highway": "residential",
         "osm_way_id": 399701533
@@ -2523,7 +2919,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-013-575169145-140",
+      "id": "rua-rb-013-575169145-162",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2533,7 +2929,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-013-575169145-140",
+        "id": "rua-rb-013-575169145-162",
         "street": "Rua RB-013",
         "highway": "residential",
         "osm_way_id": 575169145
@@ -2541,7 +2937,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-014-575154161-141",
+      "id": "rua-rb-014-575154161-163",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2551,7 +2947,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-014-575154161-141",
+        "id": "rua-rb-014-575154161-163",
         "street": "Rua RB-014",
         "highway": "residential",
         "osm_way_id": 575154161
@@ -2559,7 +2955,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-017-912643855-142",
+      "id": "rua-rb-017-912643855-164",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2569,7 +2965,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-017-912643855-142",
+        "id": "rua-rb-017-912643855-164",
         "street": "Rua RB-017",
         "highway": "residential",
         "osm_way_id": 912643855
@@ -2577,7 +2973,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-018-575169148-143",
+      "id": "rua-rb-018-575169148-165",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2587,7 +2983,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-018-575169148-143",
+        "id": "rua-rb-018-575169148-165",
         "street": "Rua RB-018",
         "highway": "residential",
         "osm_way_id": 575169148
@@ -2595,7 +2991,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-022-399701524-144",
+      "id": "rua-rb-022-399701524-166",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2605,7 +3001,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-022-399701524-144",
+        "id": "rua-rb-022-399701524-166",
         "street": "Rua RB-022",
         "highway": "residential",
         "osm_way_id": 399701524
@@ -2613,7 +3009,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rb-023-399701574-145",
+      "id": "rua-rb-023-399701574-167",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2623,7 +3019,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rb-023-399701574-145",
+        "id": "rua-rb-023-399701574-167",
         "street": "Rua RB-023",
         "highway": "residential",
         "osm_way_id": 399701574
@@ -2631,7 +3027,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rouxinol-399701560-146",
+      "id": "rua-rouxinol-399701560-168",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2641,7 +3037,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rouxinol-399701560-146",
+        "id": "rua-rouxinol-399701560-168",
         "street": "Rua Rouxinol",
         "highway": "residential",
         "osm_way_id": 399701560
@@ -2649,7 +3045,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-rudi-bononomi-575169142-147",
+      "id": "rua-rudi-bononomi-575169142-169",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2659,7 +3055,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-rudi-bononomi-575169142-147",
+        "id": "rua-rudi-bononomi-575169142-169",
         "street": "Rua Rudi Bononomi",
         "highway": "residential",
         "osm_way_id": 575169142
@@ -2667,7 +3063,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-sc-017-572720013-148",
+      "id": "rua-sc-017-572720013-170",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2677,7 +3073,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-sc-017-572720013-148",
+        "id": "rua-sc-017-572720013-170",
         "street": "Rua SC-017",
         "highway": "residential",
         "osm_way_id": 572720013
@@ -2685,7 +3081,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-sc-018-572720012-149",
+      "id": "rua-sc-018-572720012-171",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2695,7 +3091,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-sc-018-572720012-149",
+        "id": "rua-sc-018-572720012-171",
         "street": "Rua SC-018",
         "highway": "residential",
         "osm_way_id": 572720012
@@ -2703,7 +3099,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-sc-043-370371844-150",
+      "id": "rua-sc-043-370371844-172",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2713,7 +3109,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-sc-043-370371844-150",
+        "id": "rua-sc-043-370371844-172",
         "street": "Rua SC-043",
         "highway": "residential",
         "osm_way_id": 370371844
@@ -2721,7 +3117,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-sc-043-370371844-151",
+      "id": "rua-sc-043-370371844-173",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2731,7 +3127,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-sc-043-370371844-151",
+        "id": "rua-sc-043-370371844-173",
         "street": "Rua SC-043",
         "highway": "residential",
         "osm_way_id": 370371844
@@ -2739,7 +3135,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-sc-043-370371844-152",
+      "id": "rua-sc-043-370371844-174",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2749,7 +3145,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-sc-043-370371844-152",
+        "id": "rua-sc-043-370371844-174",
         "street": "Rua SC-043",
         "highway": "residential",
         "osm_way_id": 370371844
@@ -2757,7 +3153,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-santo-comandolli-575384869-153",
+      "id": "rua-santo-comandolli-575384869-175",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2767,7 +3163,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-santo-comandolli-575384869-153",
+        "id": "rua-santo-comandolli-575384869-175",
         "street": "Rua Santo Comandolli",
         "highway": "residential",
         "osm_way_id": 575384869
@@ -2775,7 +3171,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-saíra-militar-399701568-154",
+      "id": "rua-saíra-militar-399701568-176",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2785,7 +3181,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-saíra-militar-399701568-154",
+        "id": "rua-saíra-militar-399701568-176",
         "street": "Rua Saíra-Militar",
         "highway": "residential",
         "osm_way_id": 399701568
@@ -2793,7 +3189,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-sezefredo-scharf-575160729-155",
+      "id": "rua-sezefredo-scharf-575160729-177",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2803,7 +3199,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-sezefredo-scharf-575160729-155",
+        "id": "rua-sezefredo-scharf-575160729-177",
         "street": "Rua Sezefredo Scharf",
         "highway": "residential",
         "osm_way_id": 575160729
@@ -2811,7 +3207,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-siegmundo-kohler-399701545-156",
+      "id": "rua-siegmundo-kohler-399701545-178",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2821,7 +3217,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-siegmundo-kohler-399701545-156",
+        "id": "rua-siegmundo-kohler-399701545-178",
         "street": "Rua Siegmundo Kohler",
         "highway": "residential",
         "osm_way_id": 399701545
@@ -2829,7 +3225,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-teresa-peters-schwamberger-314601375-157",
+      "id": "rua-teresa-peters-schwamberger-314601375-179",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2839,7 +3235,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-teresa-peters-schwamberger-314601375-157",
+        "id": "rua-teresa-peters-schwamberger-314601375-179",
         "street": "Rua Teresa Peters Schwamberger",
         "highway": "residential",
         "osm_way_id": 314601375
@@ -2847,7 +3243,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-teresa-peters-schwamberger-314601375-158",
+      "id": "rua-teresa-peters-schwamberger-314601375-180",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2857,7 +3253,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-teresa-peters-schwamberger-314601375-158",
+        "id": "rua-teresa-peters-schwamberger-314601375-180",
         "street": "Rua Teresa Peters Schwamberger",
         "highway": "residential",
         "osm_way_id": 314601375
@@ -2865,7 +3261,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-valentim-wolf-420969289-159",
+      "id": "rua-valentim-wolf-420969289-181",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2875,7 +3271,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-valentim-wolf-420969289-159",
+        "id": "rua-valentim-wolf-420969289-181",
         "street": "Rua Valentim Wolf",
         "highway": "residential",
         "osm_way_id": 420969289
@@ -2883,7 +3279,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-varginha-307671792-160",
+      "id": "rua-varginha-307671792-182",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2893,7 +3289,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-varginha-307671792-160",
+        "id": "rua-varginha-307671792-182",
         "street": "Rua Varginha",
         "highway": "residential",
         "osm_way_id": 307671792
@@ -2901,17 +3297,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-varginha-307671792-161",
+      "id": "rua-varginha-307671792-183",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.949980609032174,
-          -27.118180088302424
+          -48.94723107032498,
+          -27.117721384869963
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-varginha-307671792-161",
+        "id": "rua-varginha-307671792-183",
         "street": "Rua Varginha",
         "highway": "residential",
         "osm_way_id": 307671792
@@ -2919,17 +3315,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-varginha-307671792-162",
+      "id": "rua-varginha-307671792-184",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.95618162028335,
-          -27.118540157508306
+          -48.950845800037236,
+          -27.119172017371238
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-varginha-307671792-162",
+        "id": "rua-varginha-307671792-184",
         "street": "Rua Varginha",
         "highway": "residential",
         "osm_way_id": 307671792
@@ -2937,7 +3333,43 @@
     },
     {
       "type": "Feature",
-      "id": "rua-varginha-307671792-163",
+      "id": "rua-varginha-307671792-185",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.95488298664321,
+          -27.119034883485956
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-varginha-307671792-185",
+        "street": "Rua Varginha",
+        "highway": "residential",
+        "osm_way_id": 307671792
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-varginha-307671792-186",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.958779942660776,
+          -27.11800703990369
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-varginha-307671792-186",
+        "street": "Rua Varginha",
+        "highway": "residential",
+        "osm_way_id": 307671792
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-varginha-307671792-187",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2947,7 +3379,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-varginha-307671792-163",
+        "id": "rua-varginha-307671792-187",
         "street": "Rua Varginha",
         "highway": "residential",
         "osm_way_id": 307671792
@@ -2955,7 +3387,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-vicente-groh-399701527-164",
+      "id": "rua-vicente-groh-399701527-188",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2965,7 +3397,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-vicente-groh-399701527-164",
+        "id": "rua-vicente-groh-399701527-188",
         "street": "Rua Vicente Groh",
         "highway": "residential",
         "osm_way_id": 399701527
@@ -2973,7 +3405,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-vilimar-hort-575278927-165",
+      "id": "rua-vilimar-hort-575278927-189",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -2983,7 +3415,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-vilimar-hort-575278927-165",
+        "id": "rua-vilimar-hort-575278927-189",
         "street": "Rua Vilimar Hort",
         "highway": "residential",
         "osm_way_id": 575278927
@@ -2991,7 +3423,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-waldemar-loschner-399701523-166",
+      "id": "rua-waldemar-loschner-399701523-190",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3001,7 +3433,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-waldemar-loschner-399701523-166",
+        "id": "rua-waldemar-loschner-399701523-190",
         "street": "Rua Waldemar Loschner",
         "highway": "residential",
         "osm_way_id": 399701523
@@ -3009,7 +3441,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-das-araras-399701562-167",
+      "id": "rua-das-araras-399701562-191",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3019,7 +3451,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-das-araras-399701562-167",
+        "id": "rua-das-araras-399701562-191",
         "street": "Rua das Araras",
         "highway": "residential",
         "osm_way_id": 399701562
@@ -3027,7 +3459,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-das-tulipas-399701575-168",
+      "id": "rua-das-tulipas-399701575-192",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3037,7 +3469,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-das-tulipas-399701575-168",
+        "id": "rua-das-tulipas-399701575-192",
         "street": "Rua das Tulipas",
         "highway": "residential",
         "osm_way_id": 399701575
@@ -3045,7 +3477,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-das-tulipas-399701575-169",
+      "id": "rua-das-tulipas-399701575-193",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3055,7 +3487,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-das-tulipas-399701575-169",
+        "id": "rua-das-tulipas-399701575-193",
         "street": "Rua das Tulipas",
         "highway": "residential",
         "osm_way_id": 399701575
@@ -3063,7 +3495,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-das-tulipas-399701575-170",
+      "id": "rua-das-tulipas-399701575-194",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3073,7 +3505,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-das-tulipas-399701575-170",
+        "id": "rua-das-tulipas-399701575-194",
         "street": "Rua das Tulipas",
         "highway": "residential",
         "osm_way_id": 399701575
@@ -3081,7 +3513,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-das-tulipas-399701575-171",
+      "id": "rua-das-tulipas-399701575-195",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3091,7 +3523,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-das-tulipas-399701575-171",
+        "id": "rua-das-tulipas-399701575-195",
         "street": "Rua das Tulipas",
         "highway": "residential",
         "osm_way_id": 399701575
@@ -3099,7 +3531,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-do-cedro-307671787-172",
+      "id": "rua-do-cedro-307671787-196",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3109,7 +3541,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-do-cedro-307671787-172",
+        "id": "rua-do-cedro-307671787-196",
         "street": "Rua do Cedro",
         "highway": "secondary",
         "osm_way_id": 307671787
@@ -3117,17 +3549,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-do-cedro-307671787-173",
+      "id": "rua-do-cedro-307671787-197",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.942176797069706,
-          -27.13138955239755
+          -48.94097642652531,
+          -27.13054730789512
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-do-cedro-307671787-173",
+        "id": "rua-do-cedro-307671787-197",
         "street": "Rua do Cedro",
         "highway": "secondary",
         "osm_way_id": 307671787
@@ -3135,17 +3567,17 @@
     },
     {
       "type": "Feature",
-      "id": "rua-do-cedro-307671787-174",
+      "id": "rua-do-cedro-307671787-198",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -48.94756961890099,
-          -27.134149033102357
+          -48.94502059476315,
+          -27.132606614904084
         ]
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-do-cedro-307671787-174",
+        "id": "rua-do-cedro-307671787-198",
         "street": "Rua do Cedro",
         "highway": "secondary",
         "osm_way_id": 307671787
@@ -3153,7 +3585,25 @@
     },
     {
       "type": "Feature",
-      "id": "rua-do-cedro-307671787-175",
+      "id": "rua-do-cedro-307671787-199",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.9483590249779,
+          -27.135367686110683
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-do-cedro-307671787-199",
+        "street": "Rua do Cedro",
+        "highway": "secondary",
+        "osm_way_id": 307671787
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-do-cedro-307671787-200",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3163,7 +3613,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-do-cedro-307671787-175",
+        "id": "rua-do-cedro-307671787-200",
         "street": "Rua do Cedro",
         "highway": "secondary",
         "osm_way_id": 307671787
@@ -3171,7 +3621,61 @@
     },
     {
       "type": "Feature",
-      "id": "rua-ângelo-mérico-399701564-176",
+      "id": "rua-do-cedro-1069443795-201",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.952423260887,
+          -27.13896268295198
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-do-cedro-1069443795-201",
+        "street": "Rua do Cedro",
+        "highway": "secondary",
+        "osm_way_id": 1069443795
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-do-cedro-1069443795-202",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.95812952870606,
+          -27.143460158760398
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-do-cedro-1069443795-202",
+        "street": "Rua do Cedro",
+        "highway": "secondary",
+        "osm_way_id": 1069443795
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-do-cedro-1069443794-203",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.9516864,
+          -27.13870975
+        ]
+      },
+      "properties": {
+        "kind": "query_point",
+        "id": "rua-do-cedro-1069443794-203",
+        "street": "Rua do Cedro",
+        "highway": "secondary",
+        "osm_way_id": 1069443794
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rua-ângelo-mérico-399701564-204",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3181,7 +3685,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-ângelo-mérico-399701564-176",
+        "id": "rua-ângelo-mérico-399701564-204",
         "street": "Rua Ângelo Mérico",
         "highway": "residential",
         "osm_way_id": 399701564
@@ -3189,7 +3693,7 @@
     },
     {
       "type": "Feature",
-      "id": "rua-ílton-da-silva-399701576-177",
+      "id": "rua-ílton-da-silva-399701576-205",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -3199,7 +3703,7 @@
       },
       "properties": {
         "kind": "query_point",
-        "id": "rua-ílton-da-silva-399701576-177",
+        "id": "rua-ílton-da-silva-399701576-205",
         "street": "Rua Ílton da Silva",
         "highway": "residential",
         "osm_way_id": 399701576
@@ -3466,7 +3970,123 @@
         "street": "Avenida Ernesto Werner",
         "highway": "secondary",
         "osm_way_id": 1416359734,
-        "sample_points": 4
+        "sample_points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way-1414850525",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -48.9443804,
+            -27.1133353
+          ],
+          [
+            -48.944421,
+            -27.1132573
+          ],
+          [
+            -48.9444778,
+            -27.1131317
+          ],
+          [
+            -48.9446197,
+            -27.112747
+          ],
+          [
+            -48.9446963,
+            -27.1122633
+          ],
+          [
+            -48.9446866,
+            -27.1118619
+          ],
+          [
+            -48.9445177,
+            -27.1113877
+          ],
+          [
+            -48.9443442,
+            -27.1110737
+          ],
+          [
+            -48.9438932,
+            -27.1103802
+          ],
+          [
+            -48.9436044,
+            -27.1098996
+          ],
+          [
+            -48.9433825,
+            -27.1094782
+          ],
+          [
+            -48.9431352,
+            -27.1091275
+          ],
+          [
+            -48.942957,
+            -27.1088984
+          ],
+          [
+            -48.9428033,
+            -27.1087241
+          ],
+          [
+            -48.94268,
+            -27.1085966
+          ],
+          [
+            -48.9425962,
+            -27.1084943
+          ],
+          [
+            -48.9418286,
+            -27.1079303
+          ],
+          [
+            -48.9415775,
+            -27.1077518
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "osm_way",
+        "street": "Avenida Ernesto Werner",
+        "highway": "secondary",
+        "osm_way_id": 1414850525,
+        "sample_points": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way-1475012135",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -48.9445909,
+            -27.1134209
+          ],
+          [
+            -48.9444907,
+            -27.1133728
+          ],
+          [
+            -48.9443804,
+            -27.1133353
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "osm_way",
+        "street": "Avenida Ernesto Werner",
+        "highway": "tertiary",
+        "osm_way_id": 1475012135,
+        "sample_points": 1
       }
     },
     {
@@ -3758,7 +4378,7 @@
         "street": "Avenida Pastor Gilmar Doerner",
         "highway": "secondary",
         "osm_way_id": 370371511,
-        "sample_points": 4
+        "sample_points": 6
       }
     },
     {
@@ -4150,7 +4770,7 @@
         "street": "Rodovia Pedro Merízio",
         "highway": "secondary",
         "osm_way_id": 503298636,
-        "sample_points": 4
+        "sample_points": 8
       }
     },
     {
@@ -4914,7 +5534,247 @@
         "street": "Rua Beira Rio",
         "highway": "tertiary",
         "osm_way_id": 307671789,
-        "sample_points": 4
+        "sample_points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way-503298665",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -48.9657456,
+            -27.1383443
+          ],
+          [
+            -48.9657867,
+            -27.1384454
+          ],
+          [
+            -48.9658618,
+            -27.1385552
+          ],
+          [
+            -48.9659585,
+            -27.138637
+          ],
+          [
+            -48.9660685,
+            -27.1387182
+          ],
+          [
+            -48.9661704,
+            -27.1387659
+          ],
+          [
+            -48.9663152,
+            -27.1388351
+          ],
+          [
+            -48.9664359,
+            -27.1388805
+          ],
+          [
+            -48.9665619,
+            -27.1389215
+          ],
+          [
+            -48.9666421,
+            -27.1389196
+          ],
+          [
+            -48.9667191,
+            -27.1389031
+          ],
+          [
+            -48.9667962,
+            -27.1388702
+          ],
+          [
+            -48.9669595,
+            -27.138777
+          ],
+          [
+            -48.9670427,
+            -27.1387386
+          ],
+          [
+            -48.9671289,
+            -27.1387167
+          ],
+          [
+            -48.9672583,
+            -27.1387055
+          ],
+          [
+            -48.9673606,
+            -27.1387357
+          ],
+          [
+            -48.9674522,
+            -27.1387958
+          ],
+          [
+            -48.9675295,
+            -27.1388839
+          ],
+          [
+            -48.967588,
+            -27.1389881
+          ],
+          [
+            -48.9676804,
+            -27.1392431
+          ],
+          [
+            -48.9677082,
+            -27.1393665
+          ],
+          [
+            -48.9677143,
+            -27.1395008
+          ],
+          [
+            -48.9676939,
+            -27.1396059
+          ],
+          [
+            -48.9676089,
+            -27.1398737
+          ],
+          [
+            -48.9675594,
+            -27.1400406
+          ],
+          [
+            -48.967524,
+            -27.1402044
+          ],
+          [
+            -48.9674638,
+            -27.1405256
+          ],
+          [
+            -48.967432,
+            -27.1406358
+          ],
+          [
+            -48.9673753,
+            -27.1407492
+          ],
+          [
+            -48.9672798,
+            -27.1408406
+          ],
+          [
+            -48.9671665,
+            -27.1409161
+          ],
+          [
+            -48.9670569,
+            -27.1409678
+          ],
+          [
+            -48.9666781,
+            -27.1411398
+          ],
+          [
+            -48.9664976,
+            -27.1412311
+          ],
+          [
+            -48.9663596,
+            -27.1413193
+          ],
+          [
+            -48.9662286,
+            -27.1414169
+          ],
+          [
+            -48.9661296,
+            -27.141524
+          ],
+          [
+            -48.9659642,
+            -27.1417394
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "osm_way",
+        "street": "Rua Beira Rio",
+        "highway": "residential",
+        "osm_way_id": 503298665,
+        "sample_points": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way-503298660",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -48.955428,
+            -27.140975
+          ],
+          [
+            -48.9556175,
+            -27.1400837
+          ],
+          [
+            -48.9556414,
+            -27.1398866
+          ],
+          [
+            -48.9556446,
+            -27.1397646
+          ],
+          [
+            -48.9556175,
+            -27.1396013
+          ],
+          [
+            -48.955571,
+            -27.1394314
+          ],
+          [
+            -48.9554988,
+            -27.1392292
+          ],
+          [
+            -48.955091,
+            -27.1381446
+          ],
+          [
+            -48.9550347,
+            -27.1379631
+          ],
+          [
+            -48.9550206,
+            -27.1379019
+          ],
+          [
+            -48.9550014,
+            -27.1377967
+          ],
+          [
+            -48.9549909,
+            -27.1377019
+          ],
+          [
+            -48.9549893,
+            -27.1375765
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "osm_way",
+        "street": "Rua Beira Rio",
+        "highway": "tertiary",
+        "osm_way_id": 503298660,
+        "sample_points": 1
       }
     },
     {
@@ -5162,6 +6022,58 @@
         "street": "Rua Botuverá",
         "highway": "secondary",
         "osm_way_id": 912692917,
+        "sample_points": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way-912692916",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -48.9587634,
+            -27.1439052
+          ],
+          [
+            -48.958891,
+            -27.1439134
+          ],
+          [
+            -48.9591381,
+            -27.1439293
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "osm_way",
+        "street": "Rua Botuverá",
+        "highway": "secondary",
+        "osm_way_id": 912692916,
+        "sample_points": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way-545829428",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -48.9596741,
+            -27.1439478
+          ],
+          [
+            -48.9598726,
+            -27.1439495
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "osm_way",
+        "street": "Rua Botuverá",
+        "highway": "secondary",
+        "osm_way_id": 545829428,
         "sample_points": 1
       }
     },
@@ -6166,7 +7078,7 @@
         "street": "Rua Ernesto Bianchini",
         "highway": "tertiary",
         "osm_way_id": 575169149,
-        "sample_points": 4
+        "sample_points": 8
       }
     },
     {
@@ -6814,6 +7726,30 @@
         "street": "Rua Irmã Josefina",
         "highway": "residential",
         "osm_way_id": 503298663,
+        "sample_points": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way-503298661",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -48.9560351,
+            -27.1400784
+          ],
+          [
+            -48.9562301,
+            -27.1400777
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "osm_way",
+        "street": "Rua Irmã Josefina",
+        "highway": "residential",
+        "osm_way_id": 503298661,
         "sample_points": 1
       }
     },
@@ -8126,7 +9062,7 @@
         "street": "Rua Luiz Morelli",
         "highway": "tertiary",
         "osm_way_id": 310248812,
-        "sample_points": 4
+        "sample_points": 5
       }
     },
     {
@@ -10458,7 +11394,7 @@
         "street": "Rua Varginha",
         "highway": "residential",
         "osm_way_id": 307671792,
-        "sample_points": 4
+        "sample_points": 6
       }
     },
     {
@@ -11002,7 +11938,115 @@
         "street": "Rua do Cedro",
         "highway": "secondary",
         "osm_way_id": 307671787,
-        "sample_points": 4
+        "sample_points": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way-1069443795",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -48.9520431,
+            -27.1388404
+          ],
+          [
+            -48.9524886,
+            -27.1389837
+          ],
+          [
+            -48.9527798,
+            -27.1390869
+          ],
+          [
+            -48.9530224,
+            -27.1391788
+          ],
+          [
+            -48.9533167,
+            -27.1392982
+          ],
+          [
+            -48.9535644,
+            -27.1394085
+          ],
+          [
+            -48.9537916,
+            -27.1395233
+          ],
+          [
+            -48.9539774,
+            -27.1396382
+          ],
+          [
+            -48.9541529,
+            -27.139776
+          ],
+          [
+            -48.9544007,
+            -27.1400103
+          ],
+          [
+            -48.9546784,
+            -27.1402739
+          ],
+          [
+            -48.9550202,
+            -27.1405983
+          ],
+          [
+            -48.955428,
+            -27.140975
+          ],
+          [
+            -48.9573291,
+            -27.1427362
+          ],
+          [
+            -48.9575253,
+            -27.1429198
+          ],
+          [
+            -48.9576422,
+            -27.1430293
+          ],
+          [
+            -48.9584163,
+            -27.1437137
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "osm_way",
+        "street": "Rua do Cedro",
+        "highway": "secondary",
+        "osm_way_id": 1069443795,
+        "sample_points": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way-1069443794",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -48.9513297,
+            -27.1385791
+          ],
+          [
+            -48.9520431,
+            -27.1388404
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "osm_way",
+        "street": "Rua do Cedro",
+        "highway": "secondary",
+        "osm_way_id": 1069443794,
+        "sample_points": 1
       }
     },
     {
