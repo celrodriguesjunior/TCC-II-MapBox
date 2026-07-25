@@ -130,12 +130,18 @@ Console.WriteLine($"  chamadas à TomTom  : {candidates.Count} ({candidates.Coun
 Console.WriteLine($"  taxa               : {options.RequestsPerSecond:F0} req/s");
 Console.WriteLine($"  duração estimada   : ~{candidates.Count / options.RequestsPerSecond:F0} s");
 
+// Sempre grava a seleção de candidatos: é revisável sem gastar uma única chamada.
+var candidatesPath = Path.Combine(options.OutputDirectory, "candidates-osm.geojson");
+await Reporter.WriteCandidatesGeoJsonAsync(candidatesPath, candidates, CancellationToken.None);
+Console.WriteLine($"\n  seleção gravada em {candidatesPath}");
+
 if (!options.Confirmed)
 {
     Console.WriteLine("""
 
-        DRY RUN — nenhuma chamada foi feita.
-        Reexecute com --confirm para gastar as chamadas acima.
+        DRY RUN — nenhuma chamada à TomTom foi feita.
+        Abra o candidates-osm.geojson num mapa para revisar a seleção.
+        Reexecute com --confirm para sondar a cobertura.
         """);
     return 0;
 }

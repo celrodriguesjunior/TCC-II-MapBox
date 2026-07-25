@@ -84,6 +84,68 @@ public static class Reporter
             .ConfigureAwait(false);
     }
 
+    /// <summary>
+    /// GeoJSON dos candidatos antes de qualquer consulta à TomTom: os pontos que seriam
+    /// amostrados e a via de origem de cada um.
+    ///
+    /// Serve para revisar a seleção contra conhecimento local do bairro — se um ponto caiu numa
+    /// rua onde não passa carro, ou se falta a rua onde sempre trava, isso aparece aqui, antes
+    /// de gastar orçamento.
+    /// </summary>
+    public static async Task WriteCandidatesGeoJsonAsync(
+        string path,
+        IReadOnlyList<Candidate> candidates,
+        CancellationToken ct)
+    {
+        var features = new List<object>();
+
+        foreach (var c in candidates)
+        {
+            features.Add(new
+            {
+                type = "Feature",
+                id = c.Id,
+                geometry = new { type = "Point", coordinates = new[] { c.QueryPoint.Lon, c.QueryPoint.Lat } },
+                properties = new Dictionary<string, object?>(StringComparer.Ordinal)
+                {
+                    ["kind"] = "query_point",
+                    ["id"] = c.Id,
+                    ["street"] = c.StreetName,
+                    ["highway"] = c.Highway,
+                    ["osm_way_id"] = c.OsmWayId,
+                },
+            });
+        }
+
+        // Uma feição por via, sem repetir a geometria a cada ponto amostrado nela.
+        foreach (var way in candidates.GroupBy(c => c.OsmWayId))
+        {
+            var first = way.First();
+            features.Add(new
+            {
+                type = "Feature",
+                id = $"way-{way.Key}",
+                geometry = new
+                {
+                    type = "LineString",
+                    coordinates = first.OsmGeometry.Select(p => new[] { p.Lon, p.Lat }).ToArray(),
+                },
+                properties = new Dictionary<string, object?>(StringComparer.Ordinal)
+                {
+                    ["kind"] = "osm_way",
+                    ["street"] = first.StreetName,
+                    ["highway"] = first.Highway,
+                    ["osm_way_id"] = way.Key,
+                    ["sample_points"] = way.Count(),
+                },
+            });
+        }
+
+        var collection = new { type = "FeatureCollection", features };
+        await File.WriteAllTextAsync(path, JsonSerializer.Serialize(collection, GeoJsonOptions), ct)
+            .ConfigureAwait(false);
+    }
+
     /// <summary>Uma linha JSON por candidato — registro cru para auditoria e reprocessamento.</summary>
     public static async Task WriteNdjsonAsync(string path, IReadOnlyList<ProbeResult> results, CancellationToken ct)
     {
